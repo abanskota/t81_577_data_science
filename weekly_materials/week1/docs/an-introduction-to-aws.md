@@ -1,0 +1,270 @@
+## Learning Objective
+
+Students will learn how to create and manipulate AWS services like EC2 engine, S3 bucket, and EBS volumes
+
+## Contents
+[1. What is cloud computing?](#what-is-cloud-computing?)
+
+[2. Why cloud computing skills are becoming essential for data scientists?](#why-cloud-computing-skills-are-becoming-essential-for-data-scientists)
+
+[3. Why AWS](#why-aws)?
+
+[4. AWS resources](#aws-resources) <br> <ul><li>[4.1. Create an AWS Account](#create-an-aws-account) <br><li> [4.2. AWS EC2](#aws-ec2)<br><uL><li>[4.2.1. Launch your own EC2 instance](#launch-your-own-instance)<br><li>[4.2.2. Connect to your instance](#connect-to-your-instance)<br><li>[4.2.3. Terminate instance](#terminate-instance)<br></ul><li>[4.3. S3 Services](#s3-services)<br><ul><li>[4.3.1. S3 data model](#s3-data-model)<br><li>[4.3.2. S3 pricing](#s3-pricing)<br><li>[4.3.3 Creating a S3 bucket](#creating-a-s3-bucket)<br></ul><li>[4.4. Elastic Block Storage (EBS)](#ebs)<br><ul><li>[4.4.1. General difference between EC2 and EBS](#general-difference-between-ec2-and-ebs)<br><li>[4.4.2. How to create an EBS volume](#how-to-create-an-ebs-volume)</ul></ul>
+
+[5. Three ways to connect to AWS resources](#three-ways-to-connect-to-aws-resources)<br><ul><li>[5.. AWS CLI](#aws-cli)<br><li>[5.2. AWS SDK for Python](#aws-sdk-for-python)</ul>
+
+
+## What is cloud computing?
+
+Cloud computing is the use of IT resources over the Internet to store, manage, and process data. Cloud providers like Amazon Web Service (AWS) and Google Cloud provides access to technology services, such as computing power, storage, and databases as needed and on pay-per-use basis as an alternative to buying, owning, maintaining physical data centers and servers.
+
+
+## Why cloud computing skills are becoming essential for data scientists?
+
+I want to share by own little story here with the hope to best illustrate how cloud computing is becoming mainstream in data science space. Before Wells Fargo, I worked as a data scientist (or senior data scientist) at Monsanto, Equifax, and PrecisionHawk. The latter was a pioneer company on commercial drones and imagery services supported by advanced robotics and software. All its data processing and web services were hosted on AWS cloud. I joined the company right after my research positions at various universities, and lack of any previous cloud experience was one of the factors for my difficult time over there. When I joined Monsanto (now Bayer) in 2016, the company was undergoing digital transformation and migrating all its data and computing resources to AWS. I needed to fully dedicate my initial few months to learn a whole host of AWS related tools and web services. Equifax, despite being a company in financial sector that is more hesitant towards cloud, recently moved to Google cloud too.
+
+As more and more companies across industries are migrating their data centers and servers towards cloud, data scientists and machine learning engineers have no other option but to embrace the change. I had the liberty to spend quite a time learning about the technologies as those companies were just transitioning into cloud, but I suspect, these companies will look for at least some prior experience in cloud technologies these days while hiring their prospective data scientists.
+
+
+## Why AWS?
+
+The primary reason is due to my own lack of sufficient experience in other cloud services. However, AWS is a major player and a leading cloud service provider especially in data science and machine learning space. Once you are trained on AWS, it would not take a lot of effort to transition to other service providers, if needed, as the technologies and basic concepts overlap.
+
+
+## AWS resources
+
+There are whole host of services provided by AWS, but they generally fall into following broad categories. In this course, we will only cover EC2 (compute service), S3, and EBS (storage), which are essential to get started.
+
+- Compute
+- Storage and Content Delivery
+- Database
+- Networking
+- Management Tools
+- Security and Identity
+- Application Services
+
+
+
+### Create an AWS account
+
+
+To get started with AWS, you need to create an AWS account. The account creation is free, but you need to provide your credit card information. Go ahead and follow the 7 steps instructions on Amazon Web Services [site](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/). 
+
+### AWS EC2
+
+Elastic compute cloud (EC2) is the compute service and is one of the core offerings by AWS. The EC2 instances are customizable and scalable (based upon the computing requirements) and thus referred to as elastic. An EC2 instance is a virtual server in EC2 for running applications on the AWS infrastructure.
+
+EC2 instances come in the following flavors:
+
+- **General Purpose** (t2,m3, m4 etc.): the most popular one and provides a balance of performance and cost; are ideal for applications that use these resources in equal proportions such as web servers, email servers.
+
+- **Compute Optimized** (c3,c4 etc.) :  ideal for compute-intensive applications that benefit from high performance processors; well suited for compute-intensive applications such as some scientific modeling or high-performance web servers, machine learning interface etc.
+
+- **Memory Optimized**: used for workloads that process large data sets in memory such as real-time big data analytics, or running Hadoop or Spark
+
+- **Accelerated Computing**: uses additional hardware (GPUs, FPGAs) co-processors to provide for efficient and parallel processing for tasks such as graphics rendering and deep learning.
+
+- **Storage Optimized**: designed for low latency workloads that require sequential read and write access on large amount of datasets on local storage such as transactional database
+
+#### Launch your own EC2 instance
+
+T2 instances are available to use in the Free Tier, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The Free-Tier instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
+
+Follow the following general steps for launching an EC2 instance from AWS Management Console. It may take a few minutes to initialize the instance. 
+
+- Set up and log into your AWS account that you created before. 
+
+- Launch an Amazon EC2 instance in the EC2 dashboard
+- Configure the instance features with the following general guidelines
+    * Choose Amazon Linux 2 AMI (free-tier eligible)
+    * Choose the t2.micro (free-tier eligible) for instance type
+    * you have the option to configure your virtual firewall
+- Review your instance configuration and choose "Launch"
+- Select "Create a new key pair" and assign a name to log in to the instance The key pair file (.pem) will download automatically - save this in a safe place.
+- Choose "Launch Instances" to complete the set up.
+
+You can find step by step instructions to create a window instance [here](https://towardsdatascience.com/aws-ec2-for-beginners-56df2e820d7f)and linux instance [here](https://medium.com/@GalarnykMichael/aws-ec2-part-1-creating-ec2-instance-9d7f8368f78a) 
+
+####  Connect to your instance
+
+After you launch your instance, you can connect to it and use it the way that you'd use a computer sitting in front of you. To connect from the console, follow the steps below:
+
+* Select the EC2 instance you created and choose "Connect"
+* Select "A Java SSH client directly from my browser". Ensure Java is installed and enabled.
+* Enter the Private key path (example: C:\KeyPairs\my-key-pair.pem)
+* Choose "Launch SSH Client"
+
+**Note**: You can also connect to a linux instance via [SSH client](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html). You can use MobaXterm or PuTTY to SSH if you are using windows. Click [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html) to learn more about that.
+
+Follow steps [here](https://gist.github.com/djsegal/9f894093165795c9350a0fedd7a8d1f5) if you want to install anaconda in the newly created instance and serve a jupyter notebook from your instance.
+
+#### Terminate Instance
+
+Amazon EC2 is free to start (learn more), but you should terminate your instances to prevent additional charges after exceeding the usage limit (750 hours). When you terminate the EC2 instance, all associated data will also be deleted. Select the EC2 instance, choose "Actions", select "Instance State", and "Terminate". 
+
+You can stop the instance instead of terminating if you attach an EBS volume to EC2 and don't want the data on the volume to be deleted. We will discuss more on EBS later. The data on your EBS volume will remain after stopping while all information on the local (ephemeral) hard drive will be lost as usual. However, there will be standard charges for EBS volume. Therefore, you should only stop an instance if you plan to start it again within a reasonable timeframe. Otherwise, you might want to terminate an instance instead of stopping it for cost saving purposes.
+
+
+### S3 Services
+
+S3 is secure, durable, and scalable object storage. S3 can be thought of as similar to Dropbox or Google drive, but a more scalable storage system accessible to codes and applications. It is important to remember that data is stored in S3 as objects but not as files. Learn more about the difference [here](https://www.netapp.com/us/info/what-is-object-storage.aspx)
+
+AWS provides encryption to the data stored in S3 and considered secure. S3 is durable due to provision of data versioning by making multiple copies across different data centers. It automatically scales according to storage requirement, and the user pay for the storage they use.
+
+#### S3 data model
+
+S3 storage of objects revolves around the concept of buckets and keys.  Data is stored as an object inside a S3 bucket. Each S3 object has data, a key, and metadata such as name of the object, size, and date. The object key (or key name) uniquely identifies the object in a bucket. It is helpful to think of bucket as similar to root directory and keys as similar to subfolder and files. But again, the S3 data model is a flat structure: there is no hierarchy of sub-buckets or subfolders. However, the logical hierarchy can be infered using key name prefixes and delimiters as the S3 console does. 
+
+If a file named /myfiles/my_file.txt is stored inside my_s3_bucket, then myfiles/my_file.txt is the key to that file. This is important to know since APIs will ask for the bucket and key separately when you want to retrieve your file from s3.
+
+#### S3 pricing
+
+The rate AWS charge for s3 storage depends upon the object size, duration of storage, and frequency of access. The cost starts at $0.023 per GB per month for standard access. See Amazon S3 Pricing [here](https://aws.amazon.com/s3/pricing/) for more information.
+
+#### Creating a s3 bucket
+
+To create a S3 bucket, and transfer files to and from the computer, follow the instructions [here](https://docs.aws.amazon.com/quickstarts/latest/s3backup/welcome.html) on AWS site
+
+### EBS
+
+Elastic Block Storage (EBS) is an external disk like storage to be used with EC2 instances. The local storage that comes with EC2 instances shuts down with instances, and the data in the local storage gets lost. EBS is the answer if we need to data to live beyond the life of an EC2 instance. 
+
+Amazon EBS volumes range from 1 GB to 16 TB in size. The storage on a volume is limited to the provisioned size and cannot be changed. The volume can be attached to any Amazon EC2 instance in the same availability Zone. Once attached, it will appear as a mounted device similar to any hard drive or other block device. At that point, the instance can interact with the volume just as it would with a local drive, formatting it with a file system or installing applications on it directly.
+
+A volume can only be attached to one instance at a time, but many volumes can be attached to a single instance. This means that you can attach multiple volumes and stripe your data across them for increased I/O and throughput performance. This is particularly helpful for database style applications that frequently encounter many random reads and writes across the dataset. If an instance fails or is detached from an Amazon EBS volume, the volume can be attached to any other instance in that Availability Zone.
+
+
+#### General difference between S3 and EBS
+
+
+|    | *S3* | *EBS*|
+|--- | :---: | ---: |
+|*Type* | External storage | volumes mounted on EC2 instance|
+|*Storage Limit* | 1 GB to 16 TB | Unlimited|
+|*Durability* | 1 in 200 to 1-in-1000 | multiple copies|
+|*EC2 Accessibility* | same availability zone| any availability zone|
+|*Performance*| Higher latency| lower latency
+|*File listing and searching*| slow | fast|
+|*price* | ||
+
+
+#### How to create an EBS volume
+
+An EBS volume can be created at the time of EC@ instance launch or can be created separately and mounted to a running instance. The detail instructions to create and attach different types of volumes from AWS management console can be found [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
+
+
+## Three ways to connect to AWS resources
+
+![](aws_3ways.png)
+
+Most of the above discussed topics related to creating and interfacing with AWS resources were based upon using AWS management console. The other two ways include using AWS CLI and AWS SDK.
+
+### AWS CLI
+
+It is an open source tool to interact with AWS programmatically. Different features of AWS resources can be accessed in command line using the AWS CLI.
+
+#### Installing AWS CLI: 
+Follow the instructions [here](https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html)
+
+#### Configuring the AWS CLI
+
+
+Type aws configure command in the command line. AWS CLI promts you for the following four pieces of information. The AWS CLI stores this information in a profile (a collection of settings) named default. The information in the default profile is used any time you run an AWS CLI command that doesn't explicitly specify a profile to use.
+
+```shellscript
+$ aws configure
+```
+- AWS Access Key ID [None]: 
+
+-  Secret Access Key [None]:
+
+-  region name [None]: 
+
+- Default output format [None]: 
+
+
+Access keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS. Access keys can be created from the AWS Management Console. The only time the access key can be viewed and downloaded is right after they are created. They can't be recovered later, though new access keys at any time can be created. 
+
+Follow the following steps to create access keys for an user under your account:
+
+- Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+
+- In the navigation pane, choose Users.
+
+- Choose the name of the user whose access keys you want to create, and then choose the Security credentials tab.
+
+- In the Access keys section, choose Create access key.
+
+- To view the new access key pair, choose Show. You will not have access to the secret access key again after this dialog box closes. Your credentials will look something like this:
+
+    ```shellscript
+    Access key ID: AKIAIOSFODNN7EXAMPLE
+    Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    ```
+- To download the key pair, choose Download .csv file. Store the keys in a secure location. 
+
+
+Once installed and configured, here are some examples to talk to and manipulate AWS resources
+
+**Example commands for EC2**
+
+View Current Status of an Instance
+
+```shellscript
+aws ec2 describe-instances
+```
+Start a new instance
+
+```shellscript
+aws ec2 start-instances --instance-ids instnace_id
+```
+
+Stop an EC2 instance
+```shellscript
+aws ec2 stop-instances --instance-ids instance_id
+
+```
+**Example commands for S3**
+
+list files in a S3 bucket
+
+```shellscript
+aws s3 ls
+```
+
+Create a new bucket
+```shellscript
+aws s3 mb s3://bucket-name
+```
+
+Sync the current folder and S3 
+```shellscript
+aws s3 sync . s3://my-bucket/path
+```
+
+Getting Started with the AWS SDKs
+Get started with EC2 by using APIs tailored to your programming language or platform, or AWS Mobile SDK to help you build high-quality mobile apps quickly and easily.
+
+
+## AWS SDK for Python 
+
+Boto3 is the AWS sdk for python. Boto3 makes it easy to integrate Python application, library, or script with AWS services.
+
+If you had already installed Anaconda, Type the following in the terminal or command line to install Boto3 on your computer.
+
+
+```python
+pip install boto3
+```
+
+or
+```python
+conda install boto3
+```
+
+if you are already familiar with python and wants to take a deep dive on boto3, follow this tutorial [here](https://realpython.com/python-boto3-aws-s3/#client-versus-resource) 
+
+
+```python
+
+```
