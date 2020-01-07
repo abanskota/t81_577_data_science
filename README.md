@@ -11,19 +11,17 @@ Spring 2020, Wednesday, 6:00 PM - 9:00 PM , Cortex COLLAB Medium Classroom, 303-
 Organizations are rapidly transforming the way they ingest, integrate, store, serve data, and perform
 analytics. In this course, students will learn the steps involved with designing and implementing data
 science projects. Topics addressed include: ingesting and parsing data from various sources, dealing with
-messy and missing data, transforming and engineering features, building and evaluating models, and
+messy and missing data, transforming and engineering features, building and evaluating machine learning models, and
 visualizing results. Using Python based tools such as Numpy, Pandas, and Scikit-learn, students will
 complete a practical data science project that addresses the entire design and implementation process.
 Students will also become familiar with the best practices and current trends in data science including
-writing elegant code with documentation, doing version control, creating reproducible research in container
-platforms, and working in a cloud environment. Upon completion of the course, students will emerge
-equipped with data science knowledge and skills that can be applied from day one on the job.
+code documentation, version control, reproducible research, pipeline automation, and cloud computing. Upon completion of the course, students will emerge equipped with data science knowledge and skills that can be applied from day one on the job.
 
 # Syllabus
 
 Week|Content
 ----|----
-Week 1 <br> **1/15/2020** |**Introductions** <ul><li>1.1. [Data science in practice](weekly_materials/week1/docs/data-science-in-practice.md) <li> 1.2. Introduction to Python Programming Language <ul> <li> 1.2.1. [Python introduction and set up](weekly_materials/week1/docs/python-introduction-and-set-up.md) <li> 1.2.2. [Jupyter Notebook and Lab](weekly_materials/week1/docs/jupyter-notebook-and-lab.md)  </ul> 1.3. [An introduction to Amazon Web Service (AWS)](weekly_materials/week1/docs/an-introduction-to-aws.md) </ul>**Assignment 1.1:** Install anaconda and test Jupyter notebook <br>**Assignment 1.2:** Set up of an AWS account, installation of AWS CLI, starting an an EC2 engine, and a S3 repository </ul>
+Week 1 <br> **1/15/2020** |**Introductions** <ul><li>1.1. [Data science in practice](weekly_materials/week1/docs/data-science-in-practice.md) <li> 1.2. Introduction to Python Programming Language <ul> <li> 1.2.1. [Python introduction and set up](weekly_materials/week1/docs/python-introduction-and-set-up.md) <li> 1.2.2. [Jupyter Notebook and Lab](weekly_materials/week1/docs/jupyter-notebook-and-lab.md)  </ul> 1.3. [An introduction to Amazon Web Service (AWS)](weekly_materials/week1/docs/an-introduction-to-aws.md) </ul>**Assignment 1.1:** Install anaconda and test Jupyter notebook <br>**Assignment 1.2:** Set up of an AWS account, installation of AWS CLI, starting an EC2 engine, and a S3 repository </ul>
 Week 2 <br> **1/22/2020** |**Python Fundamentals** <ul><li> 2.1. [Basic data types](weekly_materials/week2/notebooks/basic-data-types.ipynb) <li> 2.2. [Data structure and iterables](weekly_materials/week2/notebooks/data-structure-and-iterables.ipynb)<li> 2.3 [Conditional, iteration, and function in Python](weekly_materials/week2/notebooks/conditional_iteration_function.ipynb)<li>2.4. [Map, filter, reduce, comprehension](weekly_materials/week2/notebooks/map-filter-reduce-comprehension.ipynb) </ul>**Assignment 2:** Programming practice assignment</ul>
 Week 3 <br> **1/29/2020** |**Coding Best Practices in Data Science** <ul><li> 3.1. Version control <li> 3.2. Code documentation <li> 3.3. Packaging codes <li> 3.4. Tools for Python code quality </ul>**Assignment 3.1.:** Exercise of version control with git <br> **Assignment 3.2.** Exercise on code documentation and enforcing standards </ul>
 Week 4 <br> **2/5/2020** |**Modeling Overview** <ul><li> 4.1. Types of models <ul><li> 4.1.1. Descriptive/Prescriptive/Predictive <li> 4.1.2. Statistical vs Machine learning <li> 4.1.3. Blackbox vs Explainable </ul> 4.2. Model development steps <ul><li> 4.2.1. Framing questions <li> 4.2.2. Data ingestion and wrangling <li> 4.2.3. Data Preprocessing <li> 4.2.4. Model fitting and evaluation <li> 4.2.5 Model deployment <li> 4.2.6. Performance monitoring and redevelopment </ul></ul> **Quiz** Modeling Overview </ul>
