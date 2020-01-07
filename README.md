@@ -11,11 +11,13 @@ Spring 2020, Wednesday, 6:00 PM - 9:00 PM , Cortex COLLAB Medium Classroom, 303-
 Organizations are rapidly transforming the way they ingest, integrate, store, serve data, and perform
 analytics. In this course, students will learn the steps involved with designing and implementing data
 science projects. Topics addressed include: ingesting and parsing data from various sources, dealing with
-messy and missing data, transforming and engineering features, building and evaluating machine learning models, and
+messy and missing data, transforming and engineering features, building and evaluating models, and
 visualizing results. Using Python based tools such as Numpy, Pandas, and Scikit-learn, students will
 complete a practical data science project that addresses the entire design and implementation process.
 Students will also become familiar with the best practices and current trends in data science including
-code documentation, version control, reproducible research, pipeline automation, and cloud computing. Upon completion of the course, students will emerge equipped with data science knowledge and skills that can be applied from day one on the job.
+writing elegant code with documentation, doing version control, creating reproducible research in container
+platforms, and working in a cloud environment. Upon completion of the course, students will emerge
+equipped with data science knowledge and skills that can be applied from day one on the job.
 
 # Syllabus
 
