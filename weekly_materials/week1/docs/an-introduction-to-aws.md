@@ -48,7 +48,7 @@ There are whole host of services provided by AWS, but they generally fall into f
 ### Create an AWS account
 
 
-To get started with AWS, you need to create an AWS account. The account creation is free, but you need to provide your credit card information. Go ahead and follow the instructions on [AWS site](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/). 
+To get started with AWS, you need to create an AWS account. The account creation is free, but you need to provide your credit card information. Go ahead and create an account by following the instructions on [AWS site](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/). 
 
 ### AWS EC2
 
