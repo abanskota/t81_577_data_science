@@ -12,7 +12,7 @@ As we will learn in the upcoming weeks, most data science /machine learning proj
 
 A well-defined project structure also improves project comprehension and thus enhances replicability and reproducibility. A new team member can swiftly understand the project at a higher level without digging in to extensive documentation. It also improves search process for specific code components as someone doesn't need to go through everything before knowing where to look for very specific things. Well organized code tends to be self-documenting as the organization itself provides the contexts for the codes.
 
-A python package `cookiecutter` is easy and useful to create a standard project template. Learn more about the data science project structure [here](https://github.com/dssg/hitchhikers-guide/tree/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow) and an example and description of the implementation os such project [here](https://medium.com/swlh/how-to-structure-a-python-based-data-science-project-a-short-tutorial-for-beginners-7e00bff14f56).
+The package `cookiecutter` provides an easy way of creating a standard project template. Learn more about the data science project structure using the package [here](https://github.com/dssg/hitchhikers-guide/tree/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow) and an example and description of the implementation os such project [here](https://medium.com/swlh/how-to-structure-a-python-based-data-science-project-a-short-tutorial-for-beginners-7e00bff14f56).
 
 
 ## 3. Create a readable README document that describes the overall objective of the project and codebase with example. 
@@ -47,7 +47,7 @@ Logging is recording useful information from the code execution for identificati
 
 ## 8.  Optimize your code for performance
 
-The most common goal of code optimization is to make python code run faster and in other times to reduce memory usage. In data science projects with very large dataset, code speed and memory usage can be huge bottlenecks for quick prototyping. Dataset could be very large even for servers with very high memory and compute process and can significantly slow down your code. So any gain in code performance can go a very long way. While there are packages-specific tricks such as that for pandas and numpy (we will cover in the Week 5), some tricks and tips for general python can be found [here](https://www.geeksforgeeks.org/optimization-tips-python-code/) and [here]().
+The most common goal of code optimization is to make python code run faster and in other times to reduce memory usage. In data science projects with very large dataset, code speed and memory usage can be huge bottlenecks for quick prototyping. Dataset could be very large even for distributed systems and servers with high memory and compute process; and can significantly slow down the runtime of a code. While there are packages-specific best-practices that we will go over for pandas and numpy in Week 5, some tricks and tips for general python programming can be found [here](https://www.geeksforgeeks.org/optimization-tips-python-code/) and [here](https://www.techbeamers.com/essential-python-tips-tricks-programmers/).
 
 
 ## 9. Perform unit testing
