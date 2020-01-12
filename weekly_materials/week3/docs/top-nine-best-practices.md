@@ -12,7 +12,7 @@ As we will learn in the upcoming weeks, most data science /machine learning proj
 
 A well-defined project structure also improves project comprehension and thus enhances replicability and reproducibility. A new team member can swiftly understand the project at a higher level without digging in to extensive documentation. It also improves search process for specific code components as someone doesn't need to go through everything before knowing where to look for very specific things. Well organized code tends to be self-documenting as the organization itself provides the contexts for the codes.
 
-The package `cookiecutter` provides an easy way of creating a standard project template. Learn more about the data science project structure using the package [here](https://github.com/dssg/hitchhikers-guide/tree/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow) and an example and description of the implementation os such project [here](https://medium.com/swlh/how-to-structure-a-python-based-data-science-project-a-short-tutorial-for-beginners-7e00bff14f56).
+The package `cookiecutter` provides an easy way of creating a standard project template. Learn more about the data science project structure using the package [here](https://github.com/dssg/hitchhikers-guide/tree/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow) and an example and description of the implementation of such project [here](https://medium.com/swlh/how-to-structure-a-python-based-data-science-project-a-short-tutorial-for-beginners-7e00bff14f56).
 
 
 ## 3. Create a readable README document that describes the overall objective of the project and codebase with example. 
@@ -35,7 +35,7 @@ Modular programming is the process of dividing a computer program into separate 
 
 In python, modularity can be achieved by breaking a large body of code into smaller, more manageable chunks or functions. A module is just another file containing legitimate code and with a name with .py extension. Generally, a module contains a grouping of similar functions or classes. The module can be imported in a similar way as python package in your python script by using import statement. In fact, a python package is just a collection and organization of modules as module are to the functions.
 
-Go to [here](https://www.python-course.eu/modules_and_modular_programming.php) for further readings about creating a module and [Real Python](https://realpython.com/python-modules-packages/#python-modules-overview) for a detailed overview about module and packages.
+Click [here](https://www.python-course.eu/modules_and_modular_programming.php) for further readings about creating a module and [Real Python](https://realpython.com/python-modules-packages/#python-modules-overview) for a detailed overview about module and packages.
 
 
 
