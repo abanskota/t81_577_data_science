@@ -239,9 +239,6 @@ Sync the current folder and S3
 aws s3 sync . s3://my-bucket/path
 ```
 
-Getting Started with the AWS SDKs
-Get started with EC2 by using APIs tailored to your programming language or platform, or AWS Mobile SDK to help you build high-quality mobile apps quickly and easily.
-
 
 ## AWS SDK for Python 
 
