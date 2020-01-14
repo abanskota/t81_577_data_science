@@ -3,7 +3,7 @@
 
 Go to the AWS console and type IAM on the search box 
 
-![](../search-iam.PNG) 
+![](../search-iam.png) 
 
 Click on `users` under `Access Management`. You will see that there is no user associated with your new account. Click on `Add User` tab. 
 
