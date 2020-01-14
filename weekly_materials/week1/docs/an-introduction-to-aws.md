@@ -9,7 +9,7 @@ Students will learn how to create and manipulate AWS services like EC2 engine, S
 
 [3. Why AWS](#why-aws)?
 
-[4. AWS resources](#aws-resources) <br> <ul><li>[4.1. Create an AWS Account](#create-an-aws-account) <br><li> [4.2. AWS EC2](#aws-ec2)<br><uL><li>[4.2.1. Launch your own EC2 instance](#launch-your-own-instance)<br><li>[4.2.2. Connect to your instance](#connect-to-your-instance)<br><li>[4.2.3. Terminate instance](#terminate-instance)<br></ul><li>[4.3. S3 Services](#s3-services)<br><ul><li>[4.3.1. S3 data model](#s3-data-model)<br><li>[4.3.2. S3 pricing](#s3-pricing)<br><li>[4.3.3 Creating a S3 bucket](#creating-a-s3-bucket)<br></ul><li>[4.4. Elastic Block Storage (EBS)](#ebs)<br><ul><li>[4.4.1. General difference between EC2 and EBS](#general-difference-between-ec2-and-ebs)<br><li>[4.4.2. How to create an EBS volume](#how-to-create-an-ebs-volume)</ul></ul>
+[4. AWS resources](#aws-resources) <br> <ul><li>[4.1. Create an AWS Account](#create-an-aws-account) <br><li>[4.2. AWS IAM](#aws-iam) <br><li> [4.3. AWS EC2](#aws-ec2)<br><uL><li>[4.3.1. Launch your own EC2 instance](#launch-your-own-instance)<br><li>[4.3.2. Connect to your instance](#connect-to-your-instance)<br><li>[4.3.3. Terminate instance](#terminate-instance)<br></ul><li>[4.4. S3 Services](#s3-services)<br><ul><li>[4.4.1. S3 data model](#s3-data-model)<br><li>[4.4.2. S3 pricing](#s3-pricing)<br><li>[4.4.3 Creating a S3 bucket](#creating-a-s3-bucket)<br></ul><li>[4.5. Elastic Block Storage (EBS)](#ebs)<br><ul><li>[4.5.1. General difference between EC2 and EBS](#general-difference-between-ec2-and-ebs)<br><li>[4.5.2. How to create an EBS volume](#how-to-create-an-ebs-volume)</ul></ul>
 
 [5. Three ways to connect to AWS resources](#three-ways-to-connect-to-aws-resources)<br><ul><li>[5.. AWS CLI](#aws-cli)<br><li>[5.2. AWS SDK for Python](#aws-sdk-for-python)</ul>
 
@@ -33,7 +33,7 @@ The primary reason is due to my own lack of sufficient experience in other cloud
 
 ## AWS resources
 
-There are whole host of services provided by AWS, but they generally fall into following broad categories. In this course, we will only cover EC2 (compute service), S3, and EBS (storage), which are essential to get started.
+There are whole host of services provided by AWS, but they generally fall into the following broad categories. In this course, we will only cover IAM (security and permission), EC2 (compute service), S3, and EBS (storage), which will be sufficient for you to get started with a data science project in the cloud.
 
 - Compute
 - Storage and Content Delivery
@@ -49,6 +49,20 @@ There are whole host of services provided by AWS, but they generally fall into f
 
 
 To get started with AWS, you need to create an AWS account. The account creation is free, but you need to provide your credit card information. Go ahead and create an account by following the instructions on [AWS site](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/). 
+
+### AWS IAM
+
+AWS identity and access management (IAM) controls authentication and authorization in an AWS account. There are four key terms of IAM: 
+
+`User`: anyone who will use an AWS  account 
+
+`Group`: a collection of users with shared permissions  
+
+`Roles`: specific permission to use specific AWS resources 
+
+`Policies`: containers for security or permission 
+
+The intuitive way to understand these terms is to directly start working with them in AWS console. Follow the step-by-step guidelines [here]((https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week1/docs/python-introduction-and-set-up.md) )for creating users and groups and attaching secutiry policies to them. 
 
 ### AWS EC2
 
@@ -150,7 +164,7 @@ A volume can only be attached to one instance at a time, but many volumes can be
 
 #### How to create an EBS volume
 
-An EBS volume can be created at the time of EC@ instance launch or can be created separately and mounted to a running instance. The detail instructions to create and attach different types of volumes from AWS management console can be found [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
+An EBS volume can be created at the time of EC2 instance launch or can be created separately and mounted to a running instance. The detail instructions to create and attach different types of volumes from AWS management console can be found [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
 
 
 ## Three ways to connect to AWS resources
