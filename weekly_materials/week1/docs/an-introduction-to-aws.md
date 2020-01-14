@@ -82,7 +82,7 @@ EC2 instances come in the following flavors:
 
 #### Launch your own EC2 instance
 
-T2.micro instance is Free Tier eligible, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The Free-Tier instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
+`T2.micro` is a `free-tier` eligible EC2 instance, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
 
 Follow the following general steps for launching an EC2 instance from AWS Management Console. It may take a few minutes to initialize the instance. 
 
@@ -121,13 +121,11 @@ You can stop the instance instead of terminating if you attach an EBS volume to 
 
 ### S3 Services
 
-S3 is secure, durable, and scalable object storage. S3 can be thought of as similar to Dropbox or Google drive, but a more scalable storage system accessible to codes and applications. It is important to remember that data is stored in S3 as objects but not as files. Learn more about the difference [here](https://www.netapp.com/us/info/what-is-object-storage.aspx)
-
-AWS provides encryption to the data stored in S3 and considered secure. S3 is durable due to provision of data versioning by making multiple copies across different data centers. It automatically scales according to storage requirement, and the user pay for the storage they use.
+`S3` (simple storage service) is the mostly commonly used AWS service. S3 can be thought of as similar to Dropbox or Google drive, but a more scalable storage system accessible to codes and applications. AWS provides encryption to the data stored in S3 and considered secure. S3 is durable due to provision of data versioning by making multiple copies across different data centers. It automatically scales according to storage requirement, and the user pay for the storage they use.
 
 #### S3 data model
 
-S3 storage of objects revolves around the concept of buckets and keys.  Data is stored as an object inside a S3 bucket. Each S3 object has data, a key, and metadata such as name of the object, size, and date. The object key (or key name) uniquely identifies the object in a bucket. It is helpful to think of bucket as similar to root directory and keys as similar to subfolder and files. But again, the S3 data model is a flat structure: there is no hierarchy of sub-buckets or subfolders. However, the logical hierarchy can be infered using key name prefixes and delimiters as the S3 console does. 
+S3 storage of objects revolves around the concept of buckets and keys. Data is stored as an object inside a S3 bucket. Each S3 object has data, a key, and metadata such as name of the object, size, and date. The object key (or key name) uniquely identifies the object in a bucket. It is helpful to think of a bucket as similar to root directory and keys as similar to subfolder and files. But it is useful to remember that data is stored in S3 as objects (not files). Learn more about the difference [here](https://www.netapp.com/us/info/what-is-object-storage.aspx). So, the S3 data model is a flat structure: there is no hierarchy of sub-buckets or subfolders. However, the logical hierarchy can be infered using key name prefixes and delimiters as the S3 console does. 
 
 If a file named /myfiles/my_file.txt is stored inside my_s3_bucket, then myfiles/my_file.txt is the key to that file. This is important to know since APIs will ask for the bucket and key separately when you want to retrieve your file from s3.
 
