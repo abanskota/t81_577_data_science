@@ -86,7 +86,7 @@ T2 instances are available to use in the Free Tier, which provides free 750 hour
 
 Follow the following general steps for launching an EC2 instance from AWS Management Console. It may take a few minutes to initialize the instance. 
 
-- Set up and log into your AWS account that you created before. 
+- Log into your AWS account that you created before  
 
 - Launch an Amazon EC2 instance in the EC2 dashboard
 - Configure the instance features with the following general guidelines
@@ -178,15 +178,16 @@ Most of the above discussed topics related to creating and interfacing with AWS 
 It is an open source tool to interact with AWS programmatically. Different features of AWS resources can be accessed in command line using the AWS CLI.
 
 #### Installing AWS CLI: 
-Follow the instructions [here](https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html)
+
+Follow the instructions on the Amazon documentation [here](https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html) to install AWS CLI. For this course, you might want to install AWS CLI version 2. The version is still under testing and evaluation, and Amazon recommend not to use the version as of now in the production environment. But for this course, we probably don't care about that.
 
 #### Configuring the AWS CLI
 
 
-Type aws configure command in the command line. AWS CLI promts you for the following four pieces of information. The AWS CLI stores this information in a profile (a collection of settings) named default. The information in the default profile is used any time you run an AWS CLI command that doesn't explicitly specify a profile to use.
+After installation, you need to configure the CLI with your amazon account. For this, type aws2 configure command in the command line. AWS CLI promts you to supply the following four parameters. The AWS CLI stores this information in a profile (a collection of settings) named default. The information in the default profile is used any time you run an AWS CLI command that doesn't explicitly specify a profile to use.
 
 ```shellscript
-$ aws configure
+$ aws2 configure
 ```
 - AWS Access Key ID [None]: 
 
@@ -196,29 +197,13 @@ $ aws configure
 
 - Default output format [None]: 
 
+ You previously created the access keys and secret in the [AWS IAM](#aws-iam) and saved it to a secure locaiton. You could only download the keys right after they are created. They can't be recovered later though you can create a new access key again.
+ 
 
-Access keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS. Access keys can be created from the AWS Management Console. The only time the access key can be viewed and downloaded is right after they are created. They can't be recovered later, though new access keys at any time can be created. 
+AWS CLI is the official tool from AWS. One limitation of it is that there is no tab-completion feature. There is a tool callled `aws-shell` that offers similar functionalities as AWS CLI but with tab-completion of the typed commands. It is hard to remember all the aws commands and the tab-completion feature is very useful. So if you are interested, go to the github page of the tool [here](https://github.com/awslabs/aws-shell).
 
-Follow the following steps to create access keys for an user under your account:
+Once installed and configured, You can use AWS CLI to talk to and manipulate AWS resources. Here are some examples.
 
-- Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
-
-- In the navigation pane, choose Users.
-
-- Choose the name of the user whose access keys you want to create, and then choose the Security credentials tab.
-
-- In the Access keys section, choose Create access key.
-
-- To view the new access key pair, choose Show. You will not have access to the secret access key again after this dialog box closes. Your credentials will look something like this:
-
-    ```shellscript
-    Access key ID: AKIAIOSFODNN7EXAMPLE
-    Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    ```
-- To download the key pair, choose Download .csv file. Store the keys in a secure location. 
-
-
-Once installed and configured, here are some examples to talk to and manipulate AWS resources
 
 **Example commands for EC2**
 
