@@ -33,7 +33,7 @@ The primary reason is due to my own lack of sufficient experience in other cloud
 
 ## AWS resources
 
-There are whole host of services provided by AWS, but they generally fall into the following broad categories. In this course, we will only cover IAM (security and permission), EC2 (compute service), S3, and EBS (storage), which will be sufficient for you to get started with a data science project in the cloud.
+There are whole host of services provided by AWS, but they generally fall into the following broad categories. In this course, we will only cover IAM (security and permission), EC2 (compute service), S3, and EBS (storage), which will be minimum for you to get started with a data science project in the cloud.
 
 - Compute
 - Storage and Content Delivery
@@ -70,9 +70,9 @@ Elastic compute cloud (EC2) is the compute service and is one of the core offeri
 
 EC2 instances come in the following flavors:
 
-- **General Purpose** (t2,m3, m4 etc.): the most popular one and provides a balance of performance and cost; are ideal for applications that use these resources in equal proportions such as web servers, email servers.
+- **General Purpose**: the most popular one and provides a balance of performance and cost; are ideal for applications that use these resources in equal proportions such as web servers, email servers.
 
-- **Compute Optimized** (c3,c4 etc.) :  ideal for compute-intensive applications that benefit from high performance processors; well suited for compute-intensive applications such as some scientific modeling or high-performance web servers, machine learning interface etc.
+- **Compute Optimized**:  ideal for compute-intensive applications that benefit from high performance processors; well suited for compute-intensive applications such as some scientific modeling or high-performance web servers, machine learning interface etc.
 
 - **Memory Optimized**: used for workloads that process large data sets in memory such as real-time big data analytics, or running Hadoop or Spark
 
@@ -82,18 +82,18 @@ EC2 instances come in the following flavors:
 
 #### Launch your own EC2 instance
 
-T2 instances are available to use in the Free Tier, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The Free-Tier instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
+T2.micro instance is Free Tier eligible, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The Free-Tier instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
 
 Follow the following general steps for launching an EC2 instance from AWS Management Console. It may take a few minutes to initialize the instance. 
 
-- Log into your AWS account that you created before  
-
+- Log into your AWS account 
 - Launch an Amazon EC2 instance in the EC2 dashboard
 - Configure the instance features with the following general guidelines
     * Choose Amazon Linux 2 AMI (free-tier eligible)
     * Choose the t2.micro (free-tier eligible) for instance type
     * you have the option to configure your virtual firewall
 - Review your instance configuration and choose "Launch"
+- Add Storage
 - Select "Create a new key pair" and assign a name to log in to the instance The key pair file (.pem) will download automatically - save this in a safe place.
 - Choose "Launch Instances" to complete the set up.
 
