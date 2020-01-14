@@ -62,7 +62,7 @@ AWS identity and access management (IAM) controls authentication and authorizati
 
 `Policies`: containers for security or permission 
 
-The intuitive way to understand these terms is to directly start working with them in AWS console. Follow the step-by-step guidelines [here]((https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week1/docs/python-introduction-and-set-up.md) )for creating users and groups and attaching secutiry policies to them. 
+The intuitive way to understand these terms is to directly start working with them in AWS console. Follow the step-by-step guidelines [here]((https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week1/docs/python-introduction-and-set-up.md) for creating users and groups and attaching secutiry policies to them. 
 
 ### AWS EC2
 
