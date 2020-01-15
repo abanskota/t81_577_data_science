@@ -77,7 +77,7 @@ conda install -c conda-forge jupyterlab
 
 Start up Jupyter lab by typing the following in the terminal:
 ```shell
-jupyterlab
+jupyter lab
 ```
 This will start up Jupyter lab, and your default browser should start (or open a new tab) to the following URL: http://localhost:8888/tree
 
