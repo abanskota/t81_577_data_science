@@ -62,6 +62,8 @@ This course will focus on teaching students about all the 12 steps of applied ma
 
 [What is hardcore data science in practice](https://www.oreilly.com/radar/what-is-hardcore-data-science-in-practice/)
 
+[Software is eating data science work](https://yanirseroussi.com/2020/01/11/software-commodities-are-eating-interesting-data-science-work/)
+
 
 
 
