@@ -83,7 +83,7 @@ This will start up Jupyter lab, and your default browser should start (or open a
 
 Your browser should now look something like this:
 
-![](../files/jupyter-lab.png)
+![](../files/jupyter-lab.PNG)
 
 
 
