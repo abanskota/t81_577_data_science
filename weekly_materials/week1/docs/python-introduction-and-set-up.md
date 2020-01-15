@@ -114,6 +114,8 @@ If a package is not available from conda or Anaconda.org,  install the package v
 
 Further readings:
 
+[Is Python interpreted or compiled](https://nedbatchelder.com/blog/201803/is_python_interpreted_or_compiled_yes.html)
+
 [Module 1: Getting Started with Python](https://www.pythonlikeyoumeanit.com/module_1.html)
 
 [Why choose Python](https://realpython.com/python-introduction/)
