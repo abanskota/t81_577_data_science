@@ -120,7 +120,8 @@ EC2 instances come in the following flavors:
 
 - `Storage Optimized`: designed for low latency workloads that require sequential read and write access on large amount of datasets on local storage such as transactional database
 
-***Launch your own EC2 instance***
+#### Launch your own EC2 instance
+-----
 
 `T2.micro` is a `free-tier` eligible EC2 instance, which provides free 750 hours of Linux and Windows each month for one year for new AWS customers. The instance serves the learning objective of this course. If you plan to undertake your final project in AWS environment, then you might need to choose a suitable one in the future that meets the compute and memory requirements of the project. We will get back to this once you finalize your project topic.
 
