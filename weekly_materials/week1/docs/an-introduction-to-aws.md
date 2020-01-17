@@ -21,20 +21,28 @@ Cloud computing is the use of IT resources over the Internet to store, manage, a
 **Benefits**
 
 - Reduced: <ul> 
-- Harware cost 
+- Hardware cost 
 - Operational cost 
 - Deployment cost</ul>
 
 - Increased: <ul> 
 - Resiliency 
 - Performance (scale)
-- Capcity </ul>
+- Capacity </ul>
 
 **Cloud Computing Model**
-- All components in the cloud (database, processing, storage, application logic)
-- Hybrid Deployment (some on-premises, and others in the cloud)
+- Full cloud deployment: all components such as database, processing, storage in the cloud
+- Hybrid Deployment (e.g., some processing on-premises, and others in the cloud)
 
-
+_Other way of defining cloud models
+- Infrasturcture as a cloud service (IaaS):
+<br> Entire infrastructures in the cloud: e.g., all server and network components <br>
+Users will need to manage infrastructure
+- Platform as a service (PaaS)
+<br>Amazon manageg the infrastructure
+<br> Users only manage the applications deployed on platforms
+- Software as a service (SaaS)
+<br> Just use the software developed and managed by others
 
 ## Why cloud computing skills are becoming essential for data scientists?
 
