@@ -20,23 +20,25 @@ Cloud computing is the use of IT resources over the Internet to store, manage, a
 
 **Benefits**
 - Reduced: <ul> 
-- Hardware cost 
-- Operational cost: 
-- Deployment cost</ul>
+- _Hardware cost_ 
+- _Operational cost_
+- _Deployment cost_</ul>
 - Increased: <ul> 
-- Resiliency  <br>
+- _Resiliency_ <br>
   Recoverability from failure
-- Performance<br>
+- _Performance_<br>
   Scale up or down the resources on a need basis
-- Capacity <br>
+- _Capacity_ <br>
   Any resources such as compute and storage can grow seamlessly</ul>
 
 **Cloud Computing Model**<br>
-- Full cloud deployment: all components such as database, processing, storage in the cloud
-- Hybrid Deployment (e.g., some processing on-premises, and others in the cloud)
+- _Full cloud deployment_ <br>
+All components such as database, processing, storage in the cloud
+- _Hybrid deployment_<br>
+E.g., some processing on-premises, and others in the cloud
 
 _Other way of defining cloud models_<br>
-- `Infrasturcture as a cloud service (IaaS)`
+- `Infrasturcture as a service (IaaS)`
 <br> Entire infrastructures in the cloud: e.g., all server and network components <br>
 Users manage the infrastructure themselves
 - `Platform as a service (PaaS)`
