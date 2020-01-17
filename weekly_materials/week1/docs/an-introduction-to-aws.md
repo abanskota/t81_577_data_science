@@ -3,16 +3,16 @@
 Students will learn foundational knowlege on AWS and how to create and leverage AWS services like EC2 engine, S3 bucket, and EBS volumes.
 
 
-## Link to step-by-step Instructions
+## Link to step-by-step instructions
 
-Follow these links if you need just need sort-cut to create resources. The appropriate sections in the contents below also provide these links with elaborate discussion.
+Follow these links if you just need the links to instructions to create resources on AWS. The appropriate sections below also provide these links with elaborate discussion.
 
 - [Open an AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 - [Create IAM user and groups](../docs/iam.md)
 - [Create a free-tier EC2 instance](https://medium.com/@GalarnykMichael/aws-ec2-part-1-creating-ec2-instance-9d7f8368f78a) 
 - [Create a S3 bucket](https://docs.aws.amazon.com/quickstarts/latest/s3backup/welcome.html)
-- [Attach an EBS volume to EC2 instance]((https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
-- [Install AWS CLI]((https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html)
+- [Attach an EBS volume to EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
+- [Install AWS CLI](https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html)
 
 
 ## Contents
