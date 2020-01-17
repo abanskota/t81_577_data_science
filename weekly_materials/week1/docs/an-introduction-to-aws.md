@@ -1,6 +1,19 @@
 ## Learning Objective
 
-Students will learn how to create and manipulate AWS services like EC2 engine, S3 bucket, and EBS volumes
+Students will learn foundational knowlege on AWS and how to create and leverage AWS services like EC2 engine, S3 bucket, and EBS volumes.
+
+
+## Link to step-by-step Instructions
+
+Follow these links if you need just need sort-cut to create resources. The appropriate sections in the contents below also provide these links with elaborate discussion.
+
+- [Open an AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+- [Create IAM user and groups](../docs/iam.md)
+- [Create a free-tier EC2 instance](https://medium.com/@GalarnykMichael/aws-ec2-part-1-creating-ec2-instance-9d7f8368f78a) 
+- [Create a S3 bucket](https://docs.aws.amazon.com/quickstarts/latest/s3backup/welcome.html)
+- [Attach an EBS volume to EC2 instance]((https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html)
+- [Install AWS CLI]((https://docs.amazonaws.cn/en_us/cli/latest/userguide/install-cliv2.html)
+
 
 ## Contents
 [1. What is cloud computing?](#what-is-cloud-computing?)
@@ -18,7 +31,7 @@ Students will learn how to create and manipulate AWS services like EC2 engine, S
 
 Cloud computing is the use of IT resources over the Internet to store, manage, and process data. Cloud providers like Amazon Web Service (AWS) and Google Cloud provides access to technology services, such as computing power, storage, and databases as needed and on pay-per-use basis as an alternative to buying, owning, maintaining physical data centers and servers.
 
-**Benefits**
+***Benefits***
 - Reduced: <ul> 
 - _Hardware cost_ 
 - _Operational cost_
@@ -31,14 +44,14 @@ Cloud computing is the use of IT resources over the Internet to store, manage, a
 - _Capacity_ <br>
   Any resources such as compute and storage can grow seamlessly</ul>
 
-**Cloud Computing Model**<br>
+***Cloud Computing Model***<br>
 - _Full cloud deployment_ <br>
 All components such as database, processing, storage in the cloud
 - _Hybrid deployment_<br>
 E.g., some processing on-premises, and others in the cloud
 
 _Other way of defining cloud models_<br>
-- `Infrasturcture as a service (IaaS)`
+- `Infrastructure as a service (IaaS)`
 <br> Entire infrastructures in the cloud: e.g., all server and network components <br>
 Users manage the infrastructure themselves
 - `Platform as a service (PaaS)`
@@ -49,7 +62,7 @@ Users manage the infrastructure themselves
 
 ## Why cloud computing skills are becoming essential for data scientists?
 
-I want to share by own little story here with the hope to best illustrate how cloud computing is becoming mainstream in data science space. Before Wells Fargo, I worked as a data scientist (or senior data scientist) at Monsanto, Equifax, and PrecisionHawk. The latter was a pioneer company on commercial drones and imagery services supported by advanced robotics and software. All its data processing and web services were hosted on AWS cloud. I joined the company right after my research positions at various universities, and lack of any previous cloud experience was one of the factors for my difficult time over there. When I joined Monsanto (now Bayer) in 2016, the company was undergoing digital transformation and migrating all its data and computing resources to AWS. I needed to fully dedicate my initial few months to learn a whole host of AWS related tools and web services. Equifax, despite being a company in financial sector that is more hesitant towards cloud, recently moved to Google cloud too.
+I want to share by own little story here with the hope to best illustrate how cloud computing is becoming mainstream in data science space. Before Wells Fargo, I worked as data scientists at Monsanto, Equifax, and PrecisionHawk. The latter was a pioneer company on commercial drones and imagery services supported by advanced robotics and software. All its data processing and web services were hosted on AWS cloud. I joined the company right after my research positions at various universities, and lack of any previous cloud experience was one of the factors for my difficult time over there. When I joined Monsanto (now Bayer) in 2016, the company was undergoing full digital transformation and migrating all its data and computing resources to AWS. I needed to fully dedicate my initial few months to learn a whole host of AWS related tools and web services. Equifax, despite being a company in financial sector that is more hesitant towards cloud, recently moved to Google cloud too.
 
 As more and more companies across industries are migrating their data centers and servers towards cloud, data scientists and machine learning engineers have no other option but to embrace the change. I had the liberty to spend quite a time learning about the technologies as those companies were just transitioning into cloud, but I suspect, these companies will look for at least some prior experience in cloud technologies these days while hiring their prospective data scientists.
 
@@ -72,7 +85,6 @@ There are whole host of services provided by AWS, but they generally fall into t
 - Application Services
 
 
-
 ### Create an AWS account
 
 
@@ -90,7 +102,7 @@ AWS identity and access management (IAM) controls authentication and authorizati
 
 `Policies`: containers for security or permission 
 
-The intuitive way to understand these terms is to directly start working with them in AWS console. Follow the step-by-step guidelines [here](../docs/iam.md) for creating users and groups and attaching secutiry policies to them. 
+The intuitive way to understand these terms is to directly start working with them in AWS console. Follow the step-by-step guidelines [here](../docs/iam.md) for creating users and groups and attaching security policies to them. 
 
 ### AWS EC2
 
@@ -98,15 +110,15 @@ Elastic compute cloud (EC2) is the compute service and is one of the core offeri
 
 EC2 instances come in the following flavors:
 
-- **General Purpose**: the most popular one and provides a balance of performance and cost; are ideal for applications that use these resources in equal proportions such as web servers, email servers.
+- `General Purpose`: the most popular one and provides a balance of performance and cost; are ideal for applications that use these resources in equal proportions such as web servers, email servers.
 
-- **Compute Optimized**:  ideal for compute-intensive applications that benefit from high performance processors; well suited for compute-intensive applications such as some scientific modeling or high-performance web servers, machine learning interface etc.
+- `Compute Optimized`:  ideal for compute-intensive applications that benefit from high performance processors; well suited for compute-intensive applications such as some scientific modeling or high-performance web servers, machine learning interface etc.
 
-- **Memory Optimized**: used for workloads that process large data sets in memory such as real-time big data analytics, or running Hadoop or Spark
+- `Memory Optimized`: used for workloads that process large data sets in memory such as real-time big data analytics, or running Hadoop or Spark
 
-- **Accelerated Computing**: uses additional hardware (GPUs, FPGAs) co-processors to provide for efficient and parallel processing for tasks such as graphics rendering and deep learning.
+- `Accelerated Computing`: uses additional hardware (GPUs, FPGAs) co-processors to provide for efficient and parallel processing for tasks such as graphics rendering and deep learning.
 
-- **Storage Optimized**: designed for low latency workloads that require sequential read and write access on large amount of datasets on local storage such as transactional database
+- `Storage Optimized`: designed for low latency workloads that require sequential read and write access on large amount of datasets on local storage such as transactional database
 
 #### Launch your own EC2 instance
 
@@ -129,14 +141,13 @@ You can find step by step instructions to create a window instance [here](https:
 
 ####  Connect to your instance
 
-After you launch your instance, you can connect to it and use it the way that you'd use a computer sitting in front of you. To connect from the console, follow the steps below:
+After you launch your instance, you can connect to it and use it the way that you'd use a computer sitting in front of you. To connect to your instance using the browser-based client from the Amazon EC2 console, follow the steps below:
 
 * Select the EC2 instance you created and choose "Connect"
-* Select "A Java SSH client directly from my browser". Ensure Java is installed and enabled.
-* Enter the Private key path (example: C:\KeyPairs\my-key-pair.pem)
-* Choose "Launch SSH Client"
+* Choose EC2 Instance Connect (browser-based SSH connection), Connect.
 
-**Note**: You can also connect to a linux instance via [SSH client](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html). You can use MobaXterm or PuTTY to SSH if you are using windows. Click [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html) to learn more about that.
+
+You can also connect to a linux instance via [SSH client](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) of your choice in your computer. In mac computer, SSH client is built in the terminal. You can use MobaXterm or PuTTY to SSH if you are using windows. Click [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html) to learn more about that.
 
 Follow steps [here](https://gist.github.com/djsegal/9f894093165795c9350a0fedd7a8d1f5) if you want to install anaconda in the newly created instance and serve a jupyter notebook from your instance.
 
@@ -179,13 +190,13 @@ A volume can only be attached to one instance at a time, but many volumes can be
 
 |    | *S3* | *EBS*|
 |--- | :---: | ---: |
-|*Type* | External storage | volumes mounted on EC2 instance|
+|*Type* | External storage | Volumes mounted on EC2 instance|
 |*Storage Limit* | 1 GB to 16 TB | Unlimited|
-|*Durability* | 1 in 200 to 1-in-1000 | multiple copies|
-|*EC2 Accessibility* | same availability zone| any availability zone|
-|*Performance*| Higher latency| lower latency
-|*File listing and searching*| slow | fast|
-|*price* | ||
+|*Durability* | 1 in 200 to 1-in-1000 | Multiple copies|
+|*EC2 Accessibility* | Same availability zone| Any availability zone|
+|*Performance*| Higher latency| Lower latency
+|*File listing and searching*| Slow | Fast|
+
 
 
 #### How to create an EBS volume
