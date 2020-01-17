@@ -18,6 +18,33 @@ Students will learn how to create and manipulate AWS services like EC2 engine, S
 
 Cloud computing is the use of IT resources over the Internet to store, manage, and process data. Cloud providers like Amazon Web Service (AWS) and Google Cloud provides access to technology services, such as computing power, storage, and databases as needed and on pay-per-use basis as an alternative to buying, owning, maintaining physical data centers and servers.
 
+**Benifits**
+
+- Reduced: <br> <ul> 
+- Harware cost <br>
+- Operational cost <br>
+- Deployment cost<br></ul>
+
+- Increased: <br> <ul> 
+
+- Resiliency <br>
+- Performance (scaling)<br>
+- Capcity <br></ul>
+
+** Cloud Computing Model**
+- All components in the cloud (database, processing, storage, application logic)
+
+- Hybrid Deployment ( some on-premises, and others in the cloud
+
+
+- Infrasturcture as a cloud service (IaaS)
+
+- Platform as a service ( applications are deployed on platforms just like web hosting)
+
+- Software as a service ( just use the software as service)
+
+
+
 
 ## Why cloud computing skills are becoming essential for data scientists?
 
