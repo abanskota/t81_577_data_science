@@ -16,7 +16,7 @@ def square_num(x):
 
 - Limit line to 79 characters, but don't fret over the exact length. 
 - Wrap comments and docstrings into 72 characters.
-- Use only statement per code line
+- Use only one statement per code line
 
  
 **Naming**
@@ -93,13 +93,13 @@ def foo(a, b=[]):
 
 ` if foo is None: (or is not None)`
 
-- Never compare a boolean variable to False using ==. Use `if not x:` instead. I
+- Never compare a boolean variable to False using ==. Use `if not x:` instead. 
 
 - Use `if seq:` and `if not seq:` instead of `if len(seq)`: and `if not len(seq)` for sequences
 
 
 **References:**
 
-[Best of the Best Practices" (BOBP) guide to developing in Python](https://gist.github.com/sloria/7001839)
-[Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)
+[Best of the Best Practices" (BOBP) guide to developing in Python](https://gist.github.com/sloria/7001839)<br>
+[Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)<br>
 [PEP 8](https://www.python.org/dev/peps/pep-0008/)
