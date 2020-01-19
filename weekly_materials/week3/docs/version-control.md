@@ -5,7 +5,7 @@ Once in a while, everyone names a document they are working on with version 1, v
 
 Version control is a systematic way of keeping track of changes on documents. It is an important part of code development. It gives us a peace of mind, provides an ability to go back and forth to different versions, prevent loosing or writing over files, helps in finding bugs, and allow collaborating with everyone in the projects.
 
-Benifits:
+**_Benifits_**:
 
 - Helps with backup and restore
 - Fosters better collaboration
@@ -39,7 +39,7 @@ The local repository is the one that is created on the local machine. To save an
 Remote repository is hosted on the internet or network somewhere. It serves two purposes: backup of a local and a platform of collaboration among multiple developers. Hosting services like `GitHub` and `Bitbucket` provide platform for creating and stroring remote repostories. We will use `GitHUb` in this class.
 
 
-### getting started with Git
+### Getting started with Git
 
 **Creating a repository**
 
@@ -93,7 +93,7 @@ To commit the file, run `git commit -m <a short message for your commit>.
 
 ```bash
 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 file.txt
+ create mode 100644 test.py
  ```
  
 The first commit of the file has been created! Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.
