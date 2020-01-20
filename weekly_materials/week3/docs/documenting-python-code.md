@@ -60,7 +60,8 @@ def softmax(x, axis=-1):
 ## Function docstring
 
 - Should summarize 
-<ul> - behavior
+<ul> 
+    - behavior
     - arguments
     - return values
     - side effects
