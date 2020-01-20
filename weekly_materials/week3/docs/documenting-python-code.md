@@ -5,7 +5,7 @@
 
  "_Code is read much more often than it is written_." - `Guido van Rossum` (founder of Python)
  
- As code is read multiple times by your future version and potentially by many others, readable quality of a code is critical. In the [Section 4.3](), we learnt that following a consistent style improves code readability. In this section, we will learn to clarify the purpose, functionality, and behaviour of a code using `docstring`.
+ As code is read multiple times by your future version and potentially by many others, readable quality of a code is critical. In the [Section 3.2](weekly_materials/week3/docs/style-guide-for-python-code.md), we learnt that following a consistent style improves code readability. In this section, we will learn to clarify the purpose, functionality, and behaviour of a code using `docstring`.
 
 A `docstring` is an abbreviation for documentation string, and describes the objects defined in your source code - i.e. what your function, module, or class does. The docstring is written as the first line of the code after the object definition. [Python Enhancement Proposal -257 (PEP 257)]() prescribes a set of standards to write a proper docstring. 
 
@@ -21,7 +21,7 @@ def math_sum(var1, var2):
 ```
 
 Typing `help(math_sum)` in python console prints out the docstring for the function.
-```bash
+```
 Help on function math_sum in module __main__:
 math_sum(var1, var2)
     Returns the sum of two numbers.
