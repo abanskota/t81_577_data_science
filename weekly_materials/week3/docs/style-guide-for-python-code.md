@@ -103,3 +103,4 @@ def foo(a, b=[]):
 [Best of the Best Practices" (BOBP) guide to developing in Python](https://gist.github.com/sloria/7001839)<br>
 [Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)<br>
 [PEP 8](https://www.python.org/dev/peps/pep-0008/)
+[THe Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
