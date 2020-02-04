@@ -48,7 +48,6 @@ Machine learning models are non-parametric and make fewer assumptions about data
 <ul><li>
     Supervised 
   <ul><li>
-    
     Typically used in classification and regression problems 
     <li> Learn model structure with labelled data or target variable 
 </ul>
@@ -60,12 +59,10 @@ Machine learning models are non-parametric and make fewer assumptions about data
     
  </ul>
  <li> Reinforcement learning (RL)
-    <ul> <li>
-        
-     - Learn model structure based upon interactions of agent with environment
-     - Every action taken by an agent is associated with reward. Agent learns the best model that maximizes rewards.
-     - Common applications include problems with sequential decision making such as in robotics or computer games. There are several other interesting applications of RL such as management of traffic lights, massive reduction in energy cost of Google complex.
+    <ul> <li>Learn model structure based upon interactions of agent with environment
+     <li>Every action taken by an agent is associated with reward. Agent learns the best model that maximizes rewards.
+     <li>Common applications include problems with sequential decision making such as in robotics or computer games. There are several other interesting applications of RL such as management of traffic lights, massive reduction in energy cost of Google complex.
      </ul>
-     </ul>
+     
      
  [Next: Model categories by interpretability](#weekly_materials/week4/docs/types-by-interpretability)
