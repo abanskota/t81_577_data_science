@@ -5,7 +5,6 @@
 
 - Parametric models make assumptions about the parameters of the population distribution from which the data are drawn. For example, a linear regression between a target variable `y` and an independent variable `x` can be represented in the following equation.
 
-
 \begin{align}
 y & = \beta_0  + \beta_1 \sum_{i=1}^n x_i +  \epsilon
 \end{align}
@@ -46,19 +45,19 @@ Machine learning models are non-parametric and make fewer assumptions about data
 
 - Three types:
 <ul><li>
-    Supervised 
+    `Supervised` 
   <ul><li>
     Typically used in classification and regression problems 
     <li> Learn model structure with labelled data or target variable 
 </ul>
 <li>
-    Unsupervised 
+    `Unsupervised` 
     <ul><li>
     Learn model structure without explicit labels
     <li>Mainly used in clustering/segmentation and dimensionality reduction problems
     
  </ul>
- <li> Reinforcement learning (RL)
+ <li> `Reinforcement learning (RL)`
     <ul> <li>Learn model structure based upon interactions of agent with environment
      <li>Every action taken by an agent is associated with reward. Agent learns the best model that maximizes rewards.
      <li>Common applications include problems with sequential decision making such as in robotics or computer games. There are several other interesting applications of RL such as management of traffic lights, massive reduction in energy cost of Google complex.
