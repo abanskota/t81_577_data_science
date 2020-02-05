@@ -35,7 +35,7 @@ Recently, the concern of interpretability of machine learning, or lack thereof, 
 
 Some Machine learning models such as a single tree based model and lasso regression are interpretable. However, such models are not known for high predictive accuracy.
 
-Several techniques have recently surfaced that help interpret a complex non-linear ML model. Local interpretable model-agnostic explanations (LIME) is one of the widely known, which computes explainable linear models locally to approximate a global non-linear one. Visit this [site](#https://christophm.github.io/interpretable-ml-book) to know more such techniques in an online book for interpretable machine learning.
+Several techniques have recently surfaced that help interpret a complex non-linear ML model. Local interpretable model-agnostic explanations (LIME) is one of the widely known, which computes explainable linear models locally to approximate a global non-linear one. Visit this [site](https://christophm.github.io/interpretable-ml-book) to know more such techniques in an online book for interpretable machine learning.
 
 
 
