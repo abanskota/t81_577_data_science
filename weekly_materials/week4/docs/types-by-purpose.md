@@ -41,7 +41,7 @@ Inferential models infer the relationship between two or more variables in data.
 
 - Causal inference attempts to answer to the "Why" question in a causal manner
 
-- If X and Y are two variables, X is said to be causation of Y if Y is listening to X and changing its value accordingly.
+- If X and Y are two variables, X is said to be the causation of Y if Y is listening to X and changing its value accordingly.
 
 - The best way to establish causality is through (randomized) experiment, but experimentation is not always possible.
 
@@ -78,4 +78,4 @@ Prescriptive models prescribe the best course of action or possible consequences
 
 
 
-[Next: Model categories by algorithms](#weekly_materials/week4/docs/types-by-algorithms.md):
+[Next: Model categories by algorithms](weekly_materials/week4/docs/types-by-algorithms.md)
