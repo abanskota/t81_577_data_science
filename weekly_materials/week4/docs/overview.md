@@ -41,6 +41,6 @@ In general, there are two typyes of representational models:
 - Answering a business question doesn't always need model development - descriptive statistics and data visualization suffice in many instances
 - Determining and collecting right kind and amount of data useful to answer the business question is the most critical part of model development
 
-Next:[Types of Models in Data Science](#weekly_materials/week4/docs/types-of-models.md)
+Next:[Types of Models in Data Science](types-of-models.md)
 
 

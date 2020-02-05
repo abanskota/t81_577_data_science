@@ -78,4 +78,4 @@ Prescriptive models prescribe the best course of action or possible consequences
 
 
 
-[Next: Model categories by algorithms](weekly_materials/week4/docs/types-by-algorithms.md)
+[Next: Model categories by algorithms](types-by-algorithms.md)
