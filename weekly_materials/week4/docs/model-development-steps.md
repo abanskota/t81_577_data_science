@@ -1,9 +1,9 @@
-### Learning objective: Explore and familiarize with steps of machine-learning model development on a high level  
+### Learning objective: Explore and familiarize with the steps of machine-learning model development on a high level  
 
 
 ### Framing questions:
 
-Understanding and defining the data science problem clearly is the first and most critical aspect in the model building process. Usually, the request for a machine learning based product or solution comes from people who have better grasp on business domain. Engaging with the customers right from the beginning and asking a series of questions will allow data scientists to deliver products according to the need of customers. Formulating and asking right questions will help fully understand the need of business without making assumptions about what others are thinking.
+Understanding and clearly defining problem is the first and most critical aspect in the model building process. Usually, the request for a machine learning based product or solution comes from people who have better grasp on business domain. Engaging with the customers right from the beginning and asking a series of questions will allow data scientists to deliver products according to the need of customers. Formulating and asking right questions will help fully understand the need of business without making assumptions about what others are thinking.
 
 Example of some questions:
 
@@ -18,12 +18,12 @@ Example of some questions:
 
 ### Data collection:
 
-The goal of the step is to gather datasets that can be used to train and evaluate our machine learning models. Having already asked the right questions in relation to the data need, availability, and accessibility makes data acquisition process a lot smoother. However, this step is very critical as the quality and quantity of gathered data will directly determine how good your predictive model can be. The data collection may require integrating data from various sources and possibly involve data augmentation (where existing datasets are enhanced by adding more external or synthetic data). Some teams spend months and months of their time collecting and enriching dataset thinking a machine learning model requires humongous amount of data to work. It pays a lot to remember that the machine learning is an iterative process: quickly testing ideas on the readily available dataset can provide better guidance on the amount and type of data further needed.
+The goal of the step is to gather datasets that can be used to train and evaluate our machine learning models. Having already asked the right questions in relation to the data need, availability, and accessibility makes data acquisition process a lot smoother. However, this step is very critical as the quality and quantity of gathered data will directly determine how good your predictive model can be. The data collection may require integrating data from various sources and possibly involve data augmentation (where existing datasets are enhanced by adding more external or synthetic data). Some teams make a cardinal mistake of spending months and months of their time collecting and enriching dataset thinking a machine learning model would only work when fed with huge amount of data. Machine learning is an iterative process: quickly prototyping ideas on the readily available dataset is very important to understand the feasibility of the product, setting up benchmarks and future roadmap, and understanding whether any further data collection is needed.
 
 
 ### Data Preprocessing:
 
-Raw data rarely comes in a form suitable to readymade analysis. Many data scientists complain that they spend eighty percent of the time gathering and preprocessing data. As quality of the data is one of the main determinants of better model and predictions, it is actually a vital step in the pipeline. Preprocessing steps takes the raw data and transform them into desired shape and quality. The quality of data may suffer due to inaccuracy and inconsistency in data and format and incompleteness in values among other reasons.
+Raw data rarely comes in a form suitable to readymade analysis. Many data scientists complain that they spend eighty percent of the time gathering and preprocessing data. As data quality is one of the major determinants of model accuracy, preprocessing is an integral process of model development life-cycle. The poor data quality could be due to inaccuracy, inconsistency, or incompleteness in values among other reasons. Preprocessing takes the raw data and transform them into one with desired shape and quality. 
 
 - Data type conversion and encoding categorical features
 - Correcting inconsistency
