@@ -64,4 +64,4 @@ Machine learning models are non-parametric and make fewer assumptions about data
      </ul>
      
      
- [Next: Model categories by interpretability](#weekly_materials/week4/docs/types-by-interpretability)
+ [Next: Model categories by interpretability](weekly_materials/week4/docs/types-by-interpretability)
