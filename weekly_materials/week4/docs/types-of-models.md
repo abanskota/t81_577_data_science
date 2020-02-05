@@ -14,7 +14,7 @@ Models in data science can be catagorized into different group in the following 
 
 - Prescriptive
 
-2. [Model categories by algorithms](#weekly_materials/week4/docs/types-by-algorithms.md):
+2. [Model categories by frameworks](#weekly_materials/week4/docs/types-by-algorithms.md):
 
 - Statistical
 - Machine Learning
