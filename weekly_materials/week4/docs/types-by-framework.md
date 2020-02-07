@@ -6,7 +6,7 @@
 - Parametric models make assumptions about the parameters of the population distribution from which the data are drawn. For example, a linear regression between a target variable `y` and an independent variable `x` can be represented in the following equation.
 
 
-$ y = \beta_0  + \beta_1 \sum_{i=1}^n x_i +  \epsilon $
+$$ y = \beta_0  + \beta_1 \sum_{i=1}^n x_i +  \epsilon $$
 
 
 In order for the two coefficients to be accurate estimates (best, unbiased, consistent), several assumptions about the data and the relationship need to hold such as:
