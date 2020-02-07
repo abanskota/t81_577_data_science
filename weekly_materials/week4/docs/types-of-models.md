@@ -2,7 +2,7 @@
 
 Models in data science can be catagorized into different group in the following ways:
 
-1. [Model categories by purpose](#weekly_materials/week4/docs/types-by-purpose.md):
+1. [Model categories by purpose](types-by-purpose.md):
 
 - Segmentation
 
@@ -14,12 +14,12 @@ Models in data science can be catagorized into different group in the following 
 
 - Prescriptive
 
-2. [Model categories by frameworks](#weekly_materials/week4/docs/types-by-algorithms.md):
+2. [Model categories by frameworks](types-by-framework.md):
 
 - Statistical
 - Machine Learning
 
-3. [Model categories by interpretability](#weekly_materials/week4/docs/types-by-interpretability):
+3. [Model categories by interpretability](types-by-interpretability.md):
 
 - Blackbox
 - Explainable
