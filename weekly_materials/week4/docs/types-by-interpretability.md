@@ -6,9 +6,7 @@ In the earlier discussions, we learned that some models are interpretable while 
 
 Simple statistical models are normally considered interpretable. Let's take a look at the previous example of a simple linear regression:
 
-\begin{align}
-y & = \beta_0  + \beta_1 \sum_{i=1}^n x_i +  \epsilon
-\end{align}
+<img src="http://www.sciweavers.org/tex2img.php?eq=y%20%3D%20%20%20%5Cbeta_0%20%20%2B%20%20%5Cbeta_1%20%2A%20%20%5Csum_1%5En%20x_i%20%2B%20%20%20%5Cxi_i&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="y =   \beta  +  \beta_1 *  \sum_1^n x_i +   \xi_i" width="183" height="50" />
 
 The interpretability of the above model is attributed to the model being linear in coefficients and thus exhibiting monotonicity (the relationship between x and y always stays either positive or negative). Let's assume that we estimated the two coefficients to be 0.1 and 2, which  makes the estimated equation: 
 ```bash 
