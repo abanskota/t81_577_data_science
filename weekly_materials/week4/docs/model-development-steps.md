@@ -18,6 +18,8 @@ Example of some questions:
 - What are the different data sources, which variables do I need, and how much data will I need to get from each one? 
 - How will the results be used? 
 
+Additionally, one important question that needs to be asked at the outset is whether **machine learning is the right tool  for the problem or not**. In most instances, simple heuristics such as averages or ranks might provide the quick answer business is looking for. Don’t shy away from offering such a solution unless and until you have reasons to believe that machine learning solution can provide better answers and the necessary data is available. 
+
 ### Data collection:
 
 The goal of the data collection is to gather datasets that can be used to build and evaluate machine learning models. Having already asked the right questions in relation to the need of and accessibility to data makes the acquisition process a lot smoother. However, this step is very critical as the quality and quantity of gathered data will directly determine how good the final model is going to be. The collection may require integrating data from various sources and possibly involving augmentation (where existing datasets are enhanced by adding more external or synthetic data). Some teams make a cardinal mistake of spending months and months of their time collecting and enriching dataset thinking a machine learning model would only work when fed with large amounts of data. Machine learning is an iterative process: quickly prototyping ideas on the readily available dataset is very important for gaining foresight on product viability, setting up benchmarks and future roadmap, and understanding the required level of  further data collection.
