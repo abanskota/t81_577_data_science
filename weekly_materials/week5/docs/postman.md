@@ -1,4 +1,4 @@
-## An intro to postman for data scientists
+## Interacting with API using Postman 
 
 ### Learning Objective : Learn how to use Postman application to make simple requests to an open-source API and understand the retrived responses
 
@@ -12,7 +12,7 @@ Postman can be installed in your computer in two ways:
 
 2. It can also be installed as a desktop application. It supports both windows and Mac OS.
 
-Go to this [link](https://www.postman.com/downloads/) and download the version suitable for your OS platform and install it in your computer following the straightforward instructions. When you open the installed application, it should look like the below screenshot.
+Go to this [link](https://www.postman.com/downloads/) and download the version suitable to your OS platform and install it in your computer following the instructions. When you open the installed application, it should come across as the following.
 
 ![](../files/postman.png)
 
@@ -28,7 +28,7 @@ Once you register, an `AAPID` will be emailed back to you. Follow the following 
 
 
 In order to make a request to the weathermap API, you need to provide the endpoint URL for the resource you are requesting. Most APIs have a document that describes how to construct such URLs. Basically, APIs have a base URL to which the other endpoint paths are appended. The base URL for the weathermap API for the `version 2.5` is `api.openweathermap.org/data/2.5/weather?`. Enter the base URL in the URL section and then click on the `Params` tab and add values to `Key` and `Value` as shown in the following screenshot.
-    
+     
 ![](../files/simple-param.png)
 
 Once you enter those keys and values, you can see that those values have been appended to the base URL. The double curly brackets tells Postman to go and get the value from the Global variables you set in the previous step. You could have just typed your `AAPID` value there, but with this setup you don't need to type the value multiple times for different requests, and it also helps your `AAPID` to be invisible to others.
@@ -36,7 +36,6 @@ Once you enter those keys and values, you can see that those values have been ap
 So we are all set to send the `GET` request to the API. With that request, we are asking the API to send us back the current weather information for `Saint Louis`. Once you hit the `Send` button, you should retrieve the similar result like below.
 
 ![](../files/return-kelvin.png)
-
 
 
 On top of the returned body, you can see that the `status` was `200 ok` and the response `time` was 168 ms. The information was returned in the`JSON` format. `JSON` stands for JavaScript Object Notation, a lightweight format for storing and transporting data. The format is very similar to python dictionary represented as key and values. The API has a `mode` parameter to specify whether to return values in `JSON` , `XML`, or `HTML`. If the mode parameter is empty, the response body format is `JSON` by default.
