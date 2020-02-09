@@ -1,6 +1,6 @@
 ## An intro to postman for data scientists
 
-### create a simple request for any available open-source API and see the various components of the request and response received when the request is executed using the Postman application.
+### Learning Objective : Learn how to use Postman application to make simple requests to an open-source API and understand the retrived responses
 
 Postman is a tool used by developers to test RESTful APIs they build. For data scientists, it provides a simple graphical interface to interact with an API and test its functionality without worrying too much about correctly formatting the http requests. Once an API call is tested by sending HTTP requests and retrieving data successfully in Postman, it gets much easier to implement the same in python to retrieve data in an automated manner.
 
