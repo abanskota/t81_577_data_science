@@ -1,0 +1,129 @@
+id,lat,lon,city,state
+0,41,80," ""Youngstown""", OH
+1,42,97," ""Yankton""", SD
+2,46,120," ""Yakima""", WA
+3,42,71," ""Worcester""", MA
+4,43,89," ""Wisconsin Dells""", WI
+5,36,80," ""Winston-Salem""", NC
+6,49,97," ""Winnipeg""", MB
+7,39,78," ""Winchester""", VA
+8,34,77," ""Wilmington""", NC
+9,39,75," ""Wilmington""", DE
+10,48,103," ""Williston""", ND
+11,41,77," ""Williamsport""", PA
+12,37,82," ""Williamson""", WV
+13,33,98," ""Wichita Falls""", TX
+14,37,97," ""Wichita""", KS
+15,40,80," ""Wheeling""", WV
+16,26,80," ""West Palm Beach""", FL
+17,47,120," ""Wenatchee""", WA
+18,41,122," ""Weed""", CA
+19,31,82," ""Waycross""", GA
+20,44,89," ""Wausau""", WI
+21,42,87," ""Waukegan""", IL
+22,44,97," ""Watertown""", SD
+23,43,75," ""Watertown""", NY
+24,42,92," ""Waterloo""", IA
+25,41,73," ""Waterbury""", CT
+26,38,77," ""Washington""", DC
+27,41,79," ""Warren""", PA
+28,46,118," ""Walla Walla""", WA
+29,31,97," ""Waco""", TX
+30,38,87," ""Vincennes""", IN
+31,28,97," ""Victoria""", TX
+32,32,90," ""Vicksburg""", MS
+33,49,123," ""Vancouver""", BC
+34,46,98," ""Valley City""", ND
+35,30,83," ""Valdosta""", GA
+36,43,75," ""Utica""", NY
+37,39,79," ""Uniontown""", PA
+38,32,95," ""Tyler""", TX
+39,42,114," ""Twin Falls""", ID
+40,33,87," ""Tuscaloosa""", AL
+41,34,88," ""Tupelo""", MS
+42,36,95," ""Tulsa""", OK
+43,32,110," ""Tucson""", AZ
+44,37,104," ""Trinidad""", CO
+45,40,74," ""Trenton""", NJ
+46,44,85," ""Traverse City""", MI
+47,43,79," ""Toronto""", ON
+48,39,95," ""Topeka""", KS
+49,41,83," ""Toledo""", OH
+50,33,94," ""Texarkana""", TX
+51,39,87," ""Terre Haute""", IN
+52,27,82," ""Tampa""", FL
+53,30,84," ""Tallahassee""", FL
+54,47,122," ""Tacoma""", WA
+55,43,76," ""Syracuse""", NY
+56,32,82," ""Swainsboro""", GA
+57,33,80," ""Sumter""", SC
+58,40,75," ""Stroudsburg""", PA
+59,37,121," ""Stockton""", CA
+60,44,89," ""Stevens Point""", WI
+61,40,80," ""Steubenville""", OH
+62,40,103," ""Sterling""", CO
+63,38,79," ""Staunton""", VA
+64,39,83," ""Springfield""", OH
+65,37,93," ""Springfield""", MO
+66,42,72," ""Springfield""", MA
+67,39,89," ""Springfield""", IL
+68,47,117," ""Spokane""", WA
+69,41,86," ""South Bend""", IN
+70,43,96," ""Sioux Falls""", SD
+71,42,96," ""Sioux City""", IA
+72,32,93," ""Shreveport""", LA
+73,33,96," ""Sherman""", TX
+74,44,106," ""Sheridan""", WY
+75,35,96," ""Seminole""", OK
+76,32,87," ""Selma""", AL
+77,38,93," ""Sedalia""", MO
+78,47,122," ""Seattle""", WA
+79,41,75," ""Scranton""", PA
+80,41,103," ""Scottsbluff""", NB
+81,42,73," ""Schenectady""", NY
+82,32,81," ""Savannah""", GA
+83,46,84," ""Sault Sainte Marie""", MI
+84,27,82," ""Sarasota""", FL
+85,38,122," ""Santa Rosa""", CA
+86,35,105," ""Santa Fe""", NM
+87,34,119," ""Santa Barbara""", CA
+88,33,117," ""Santa Ana""", CA
+89,37,121," ""San Jose""", CA
+90,37,122," ""San Francisco""", CA
+91,41,82," ""Sandusky""", OH
+92,32,117," ""San Diego""", CA
+93,34,117," ""San Bernardino""", CA
+94,29,98," ""San Antonio""", TX
+95,31,100," ""San Angelo""", TX
+96,40,111," ""Salt Lake City""", UT
+97,38,75," ""Salisbury""", MD
+98,36,121," ""Salinas""", CA
+99,38,97," ""Salina""", KS
+100,38,106," ""Salida""", CO
+101,44,123," ""Salem""", OR
+102,44,93," ""Saint Paul""", MN
+103,38,90," ""Saint Louis""", MO
+104,39,94," ""Saint Joseph""", MO
+105,42,86," ""Saint Joseph""", MI
+106,44,72," ""Saint Johnsbury""", VT
+107,45,94," ""Saint Cloud""", MN
+108,29,81," ""Saint Augustine""", FL
+109,43,83," ""Saginaw""", MI
+110,38,121," ""Sacramento""", CA
+111,43,72," ""Rutland""", VT
+112,33,104," ""Roswell""", NM
+113,35,77," ""Rocky Mount""", NC
+114,41,109," ""Rock Springs""", WY
+115,42,89," ""Rockford""", IL
+116,43,77," ""Rochester""", NY
+117,44,92," ""Rochester""", MN
+118,37,79," ""Roanoke""", VA
+119,37,77," ""Richmond""", VA
+120,39,84," ""Richmond""", IN
+121,38,112," ""Richfield""", UT
+122,45,89," ""Rhinelander""", WI
+123,39,119," ""Reno""", NV
+124,50,104," ""Regina""", SA
+125,40,122," ""Red Bluff""", CA
+126,40,75," ""Reading""", PA
+127,41,81," ""Ravenna""", OH 
