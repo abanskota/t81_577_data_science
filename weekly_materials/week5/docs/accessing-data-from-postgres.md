@@ -43,7 +43,7 @@ Since there is no table in the
 CSV_TABLE = '/home/asimbanskota/t81_577_data_science/weekly_materials/week5/files/city.csv'. The table has five columns: `id`, `lat`, `lon`, `city`, and `state` as shown below. 
 
 
-![](../files/postman.png)
+![](../files/table.png)
 
 To load the table in posgres, we first need to create an empty table with schema describing the data types for all columns in the table. We learnt above how to create a cursor object from a connection to posgres. To execute any command, you need to call the execute method of the cursor by passing the postgres sql command as below for creating a table:
 
@@ -170,8 +170,10 @@ get_city_data(sql)
 
 
 ### References:
-https://www.dataquest.io/blog/loading-data-into-postgres/
-https://pynative.com/python-postgresql-select-data-from-table/
+
+[Loading data into postgres](https://www.dataquest.io/blog/loading-data-into-postgres/)
+
+[Select data from table](https://pynative.com/python-postgresql-select-data-from-table/)
 
 
 
