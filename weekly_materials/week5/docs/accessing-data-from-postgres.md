@@ -1,15 +1,15 @@
-## Learning objective: Learn how to access data from a relational database into python using PostgreSQL as an example
+## Learning objective: Learn how to fetch data from a table in a relational database (PostgreSQL) using psycopg2 library
 
 
 
 
 ## Install PostgreSQL 
 
-PostgreSql (aka Postgres) is a popular open-source relational database management system (DBMS). A relational DBMS employs the relational data model in which data are organized into tables. Postgres allows us to perform tasks such as control access to a relational database, read and  write data into database and run queries. 
+PostgreSql (aka Postgres) is a popular open-source relational database management system (DBMS). A relational DBMS employs the relational data model in which data are organized into table-like(row-column) structure. Postgres allows us to perform tasks such as control access to a relational database, read and write data into database and run queries. 
 
-As data scientists, we rarely find ourselves installing DBMS like Postgres. However, in this lesson, in order to learn how to connect to the databases and read data into python, we first need to install it on the computer. Visit this [link](https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/) for a step by step instruction to install Postgres in your machine.
+ In order to learn how to connect to the databases and read data into python, it is necesary to have Postgres installed on your working computer or have access to one on Web or server. Visit this [link](https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/) for a step-by-step instruction to install Postgres in your machine.
 
-Once installed, we need to start the server. Go to this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html) to configure and start the server in Windows and in this [link] for Mac.
+Once installed, we need to start the server. Go to this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html) to configure and start the server in Windows or to this [link] for Mac.
 
 Once the server is started, type `psql` in your command line. `psql` enables us to send queries interactively, issue them to Postgres, and see the query results.
 
@@ -21,7 +21,7 @@ CREATE DATABASE t81577;
 
 ### Connect to the database using psycopg2
 
-To connect to the database we just created, we will use a python library named `psycopg2`. the library has the connect() method that takes in some parameters to connect to the Postgres server and returns a Connection object. The default value for the `username` and `password` parameters is `postgres`. Pass in the right parameters accordingly if you changed them after installation.
+To connect to the database we just created, we will use a python library named `psycopg2`. The library has connect() method that takes in some parameters to connect to Postgres server and returns a Connection object. The default value for the `username` and `password` parameters is `postgres`. Pass in the right parameters in case you changed them after installation.
 
 ```python
 import psycopg2
@@ -45,7 +45,7 @@ CSV_TABLE = '/home/asimbanskota/t81_577_data_science/weekly_materials/week5/file
 
 ![](../files/tables.png)
 
-To load the table in Postgres, we first need to create an empty table with schema describing the data types for all columns in the table. We learnt above how to create a cursor object from a connection to Postgres. To execute any command, you need to call the execute method of the cursor by passing the Postgresql command as below for creating a table:
+To load the table in Postgres, we first need to create an empty table with schema describing data types for all columns in the table. We learnt earlier how to create a cursor object from a connection to Postgres. To execute any command, you need to call the execute method of the cursor by passing the Postgresql command as below for creating a table:
 
 ```python
 import psycopg2
