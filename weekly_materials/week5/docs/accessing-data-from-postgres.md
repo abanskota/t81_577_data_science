@@ -1,4 +1,4 @@
-## Learning objective: Learn how to access data from a relational database into python using postgressql as an example
+## Learning objective: Learn how to access data from a relational database into python using PostgreSQL as an example
 
 
 
