@@ -12,7 +12,7 @@ The interpretability of the above model is attributed to the model being linear 
 ```bash 
 y = 0.1 + 2*x
 ```
-The model could be interpreted as: `for every 2 unit increase in x, y increases with 1 unit`. 
+The model could be interpreted as: `for every 1 unit increase in x, y increases with 2 unit`. 
 
 As the regression becomes more complex with greater number of dependent variables and interactions between them, the model becomes less and less interpretable.
 
