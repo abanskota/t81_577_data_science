@@ -3,15 +3,15 @@
 
 
 
-## Install PostgreSQL  and start the server
+## Install PostgreSQL 
 
-PostgreSql (aka Postgres) is a popular open-source relational database management system (DBMS). A relational DBMS employs the relational data model in which data are organized into tables. Postgres allows you to perform tasks such as control access to a relational database, read and  write data into database and run queries. 
+PostgreSql (aka Postgres) is a popular open-source relational database management system (DBMS). A relational DBMS employs the relational data model in which data are organized into tables. Postgres allows us to perform tasks such as control access to a relational database, read and  write data into database and run queries. 
 
-As a data scientist, we rarely find yourself installing DBMS like Postgres. Since we want to learn how to connect to the databases and read data into python, we first need to install it the computer. Go to this [link](https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/) for a step by step instruction to install postgressql in your machine.
+As data scientists, we rarely find ourselves installing DBMS like Postgres. However, in this lesson, in order to learn how to connect to the databases and read data into python, we first need to install it on the computer. Visit this [link](https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/) for a step by step instruction to install Postgres in your machine.
 
-Once installed, you need to start the server. Go to this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html) to configure and start the server in windows and in this [link] for mac.
+Once installed, we need to start the server. Go to this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html) to configure and start the server in Windows and in this [link] for Mac.
 
-Once server is started, type `psql` in your command line. `psql` enables you to type in queries interactively, issue them to PostgreSQL, and see the query results.
+Once the server is started, type `psql` in your command line. `psql` enables us to send queries interactively, issue them to Postgres, and see the query results.
 
 Type the following in the `psql` prompt to create a new database named `t81577`:
 
@@ -21,14 +21,14 @@ CREATE DATABASE t81577;
 
 ### Connect to the database using psycopg2
 
-To connect to the database we just created, we will use a python library named `psycopg2`. the library has the connect() method that takes in some parameters to connect to the Posgres server and returns a Connection object. The default value for the `username` and `password` parameters is `postgres`. Pass in the right values accordingly if you changed them after installation.
+To connect to the database we just created, we will use a python library named `psycopg2`. the library has the connect() method that takes in some parameters to connect to the Postgres server and returns a Connection object. The default value for the `username` and `password` parameters is `postgres`. Pass in the right parameters accordingly if you changed them after installation.
 
 ```python
 import psycopg2
 conn = psycopg2.connect(host="localhost",database="t81577", user="postgres", password="postgres")
 ```
 
-The connection object creates a client session with the database server. To execute commands and queries against the database, you will also need to create another object called the Cursor object, whihc is created by the Connection object.
+The connection object creates a client session with the database server. To execute commands and queries against the database, you will also need to create another object called the Cursor object, which is created by the Connection object.
 
 ```python
 cur = conn.cursor()
@@ -37,15 +37,15 @@ cur = conn.cursor()
 ### Load a csv data into postgres
 
 
-Since there is no table in the
+TODO: COMPLETE THIS SECTION
 
 
 CSV_TABLE = '/home/asimbanskota/t81_577_data_science/weekly_materials/week5/files/city.csv'. The table has five columns: `id`, `lat`, `lon`, `city`, and `state` as shown below. 
 
 
-![](../files/table.png)
+![](../files/tables.png)
 
-To load the table in posgres, we first need to create an empty table with schema describing the data types for all columns in the table. We learnt above how to create a cursor object from a connection to posgres. To execute any command, you need to call the execute method of the cursor by passing the postgres sql command as below for creating a table:
+To load the table in Postgres, we first need to create an empty table with schema describing the data types for all columns in the table. We learnt above how to create a cursor object from a connection to Postgres. To execute any command, you need to call the execute method of the cursor by passing the Postgresql command as below for creating a table:
 
 ```python
 import psycopg2
@@ -81,10 +81,10 @@ conn.close()
 ```
 
 
-## Access data into Python
+## Fetch data into Python
 
 In this section we will learn about how to fetch data from PostgreSQL database into a python application using `psycopg2` library. 
-Note that even though we are focussing here on accessing data from PostgreSQL, the methods and the syntax would be the same for other relational database as well. As a reminder,
+Note that even though we are focusing here on accessing data from PostgreSQL, the methods and the syntax would be the same for other relational databases as well. As a reminder,
 
 - Use the `connect()` method of `psycopg2` to connect to a database
 - Create a cursor object using the connection object returned by the connect method
@@ -103,14 +103,14 @@ cur.close()
 conn.close()
 ```
 
-As some table could be huge in size and grabbing the entire data might be neither realistic nor necessary, other two cursor methods `fetchmany()`, `fetchone()` can be used to retrive selective rows from the table. 
+As some tables could be huge in size and grabbing the entire data might be neither realistic nor necessary, other two cursor methods `fetchmany()`, `fetchone()` can be used to retrieve selected rows from the table. 
 
 For example, to fetch just 10 rows, run the following command after opening connection and executing the sql query as before:
 
 ```python
 records = cur.fetchmany(10)
 ```
-If the cur.fetchmany(10) is called again with the previous cursor open, next 10 rows will be returned.
+If the cur.fetchmany(10) is called again with the previous cursor open, the next 10 rows will be returned.
 
 ### Querying data
 
@@ -127,7 +127,7 @@ sql = """SELECT city,state FROM cities"""
 cur.execute(sql)
 cur.fetchall()
 ```
-To select only those rows that meet certain criterion, for example, `lat` colum value less than 80 degree:
+To select only those rows that meet certain criterion, for example, `lat` column value less than 80 degree:
 
 ```python
 sql = """SELECT city,state FROM cities WHERE lon <80"""
@@ -167,6 +167,7 @@ def get_city_data(sql):
 sql = """SELECT city,state FROM cities WHERE lon <80 AND lat >30 ORDER BY city"""
 get_city_data(sql)
 ```
+
 
 
 ### References:
