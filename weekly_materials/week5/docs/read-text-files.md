@@ -30,7 +30,7 @@ finally:
     file.close()
 ```
 
-Even better, `with` statement can be done the same without the need for remembering to close the file.
+Even better, `with` statement can be used t do the same without the need for remembering to close the file.
 
 ```python
 with open (CSV_FILE, "r") as file:
@@ -74,7 +74,7 @@ Which outputs the entire first line:
 id,lat,lon,city,state
 ```
     
-With .readline(), we can iterate over each single line of the file:
+We can iterate over each single line of the file:
   
 ```python
 with open (CSV_FILE, "r") as file:
@@ -86,6 +86,7 @@ The above code outputs 5 lines as follows:
 
     ```shell
     id,lat,lon,city,state
+    ```
 
 0,41,80," ""Youngstown""", OH
 
