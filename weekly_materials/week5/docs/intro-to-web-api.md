@@ -1,6 +1,6 @@
 ### Into to web API
 
-``` I had a terrible experience figuring out what API was. I met a lot of people talking about APIs without ever being able to tell me what it was. My impression was that the most people pretended to know what API was, and I started doing the same.```
+``` I had a hard time figuring out what API was. I met a lot of people talking about APIs without them telling me what actually it was. My impression was that the most people pretended to know what API was, and I started doing the same.```
 
 Data is being increasingly served from the web using APIs. Digital data companies like Twitter, Facebook, or Google have tons of new and changing data everyday, and serving  the data via API makes it easily accessible to users. API will also allow users to efficiently retrieve  a small subset of relevant data from a large database hosted on the web.
 
