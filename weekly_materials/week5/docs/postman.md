@@ -2,9 +2,9 @@
 
 ### Learning Objective : Learn how to use Postman application to make simple requests to an open-source API and understand the retrived responses
 
-Postman is a tool used by developers to test RESTful APIs they build. For data scientists, it provides a simple graphical interface to interact with an API and test its functionality without worrying too much about correctly formatting the http requests. Once an API call is tested by sending HTTP requests and retrieving data successfully in Postman, it gets much easier to implement the same in python to retrieve data in an automated manner.
+Postman is a tool used by developers to test RESTful APIs they build. For data scientists, it provides a simple graphical interface to interact with an API and test its functionality without worrying too much about correctly formatting the requests URL. Once getting familiarity with an API in Postman, it is much easier to send requests and receive response in python.
 
-Install Postman
+**Install Postman**
 
 Postman can be installed in your computer in two ways:
 
@@ -12,7 +12,7 @@ Postman can be installed in your computer in two ways:
 
 2. It can also be installed as a desktop application. It supports both windows and Mac OS.
 
-Go to this [link](https://www.postman.com/downloads/) and download the version suitable to your OS platform and install it in your computer following the instructions. When you open the installed application, it should come across as the following.
+Go to this [link](https://www.postman.com/downloads/) and download the one suited to your OS platform and install it in your computer following the instructions. When you open the installed application, it should come across as the following.
 
 ![](../files/postman.png)
 
