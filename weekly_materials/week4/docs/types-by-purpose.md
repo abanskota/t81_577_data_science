@@ -27,7 +27,7 @@ Not all models in data science serve the same purpose. Models are built to answe
 
 Inferential models infer the relationship between two or more variables in data. Inferential models can belong to two families.
 
-1. Correlation based inference
+**1. Correlation based inference**
 
 - Inference of relationship between variables based upon correlation (how variables covary)
 
@@ -37,15 +37,15 @@ Inferential models infer the relationship between two or more variables in data.
 
 - Correlation based inference is useful in understanding what would likely happen to a target variable of interest Y if X changes. The conclusion, however, could be very wrong if the observed correlation were spurious one. Such analysis also doesn't provide any insight on "why" does Y change with X. Correlation is not causation.
 
-2. Causal inference 
+**2. Causal inference**
 
 - Causal inference attempts to answer to the "Why" question in a causal manner
 
-- If X and Y are two variables, X is said to be the causation of Y if Y is listening to X and changing its value accordingly.
+- If X and Y are two events, X is said to be the cause of Y if Y is listening to X and changing its value accordingly.
 
 - The best way to establish causality is through (randomized) experiment, but experimentation is not always possible.
 
-- Traditional statistical tools are not sufficient for causal inference, other extension tools need to be employed to estimate causal effect from observation data
+- Traditional statistical tools are not sufficient for causal inference; other extension tools need to be employed to estimate causal effect from observation data
 
 - Relatively less used historically but receiving increased attention lately in research and data science.
 
