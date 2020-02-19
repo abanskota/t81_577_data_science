@@ -1,8 +1,6 @@
 ### Into to web API
 
 
-``` I had a hard time figuring out what API was. I met a lot of people talking about APIs without them telling me what actually it was. My impression was that the most people pretended to know what API was, and I started doing the same.```
-
 Data is being increasingly served from the web using APIs. Digital data companies like Twitter, Facebook, or Google have tons of new and changing data everyday, and serving  via API makes data easily accessible to their users. API also allow users to efficiently retrieve a small subset of relevant data from a large database hosted on the web. This is not only true for the big Silicon Valley companies but also for the others who host their enterprise data on cloud. For example, Bayer crop science (formerly Monsanto and my former employer) used to serve its products, customers, and geospatial data almost entirely via APIs to internal users.
 
 
@@ -19,14 +17,17 @@ REST(Representational state transfer) API uses HTTP (Hyper Text Transfer Prototo
 
 A client can make the following four main types of HTTP requests to interact with a web API. We will learn in the next section what a HTTP request looks like and how to format and send one.
 
-<ul><li>
-- `GET`:  to get information, data, metadata,etc. GET does not modify the resources, and normally, this is the only request a service consumer of an API makes. 
+<ul><li> 
+
+**GET**:  to get information, data, metadata,etc. GET does not modify the resources, and normally, this is the only request a service consumer of an API makes. <li>
+    
+**POST**: to create a new resource into the collection of resources.
 <li>
-- `POST`: to create a new resource into the collection of resources.
+    
+**PUT**:  to changes existing information
 <li>
-- `PUT`:  to changes existing information
-<li>
-- `DELETE`: to delete existing information
+    
+**DELETE**: to delete existing information
 </ul>
 
 Clients not necessarily always receive intended response for their requests. A request might fail for several reasons such as invalid request, lack of existence of service, or problem on server. All responses to client’s requests consist of HTTP status codes such as:
