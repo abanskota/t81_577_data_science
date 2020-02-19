@@ -32,8 +32,8 @@ A client can make the following four main types of HTTP requests to interact wit
 
 Clients not necessarily always receive intended response for their requests. A request might fail for several reasons such as invalid request, lack of existence of service, or problem on server. All responses to client’s requests consist of HTTP status codes such as:
 
-Status code `200` (**success**):  The request is valid and the clients retrieve what they requested.
-Status code `400`(**bad request**): Something went wrong such as due to badly formatted requests or authentication issue. 
-Status code `500`(**server error**) : There was nothing wrong with the request but something with the server.
+Status code `200` (**success**):  The request is valid and the clients retrieve what they requested.<br>
+Status code `400`(**bad request**): Something went wrong such as due to badly formatted requests or authentication issue. <br>
+Status code `500`(**server error**) : There was nothing wrong with the request but something with the server.<br>
 
 An application client such as python program to interact with an API should always check the HTTP status code before trying to do any other things with the response. Now that you have a general idea of API, methods to talk to API and status codes of the response, we will start learning how to make requests to APIs first with a software client named `POSTMAN` and then with  python library named `requests`.
