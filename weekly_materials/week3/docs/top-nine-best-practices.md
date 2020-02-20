@@ -26,7 +26,7 @@ A README document is often kept in the root directory of the project and is writ
 A virtual environment is an isolated environment that maintains a clean installation of Python packages and resolves project dependencies. It also helps others recreate the same environment in their computer quickly and in a hassle-free manner. Visit this [site](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to learn how to create a virtual environment with Conda or [here](https://realpython.com/python-virtual-environments-a-primer/) with virtualenv package.
 
 
-### 5. Adopt a consistent coding style .
+### 5. Adopt a consistent coding style.
 
 Data scientists are not renowned for writing readable codes. However, code readability in data science is very important as they are read multiple times by your future version and potentially by others. One way of improving the readability is by following a consistent style throughout a code base. I have summarized [here](style-guide-for-python-code.md) some guidelines and the best practices on how to maintain style consistency and added some useful references to the topic at the end of the article.
 
@@ -37,7 +37,7 @@ Modular programming is the process of breaking up a large body of code into smal
 
 ### 7.  Optimize your code for performance.
 
-The goal of code optimization is either to make code perform better such that it uses the least possible memory or disk space, minimizes CPU time, and runs faster. Sometimes, it could just mean utilizing as many possible CPU cores as available to make your code run faster. In projects with a very large dataset, writing a CPU and memory efficient code could be critical for quick prototyping. This [article](https://e2eml.school/code_optimization.html) by Brandon Rohrer summarizes some excellent general tips for running codes faster. Additionally, pay attention to library specific tips and tricks such as working with a huge file in Pandas and when to switch from Pandas dataframe to Numpy array based analysis etc. 
+The goal of code optimization is to make code perform better such that it uses the least possible memory or disk space, minimizes CPU time, and runs faster. Sometimes, it could just mean utilizing as many possible CPU cores as available to make your code run faster. In projects with a very large dataset, writing a CPU and memory efficient code could be critical for quick prototyping. This [article](https://e2eml.school/code_optimization.html) by Brandon Rohrer summarizes some excellent general tips for running codes faster. Additionally, pay attention to library specific tips and tricks such as working with a huge file in Pandas and when to switch from Pandas dataframe to Numpy array based analysis etc. 
 
 
 ### 8. Perform unit testing.
@@ -45,6 +45,6 @@ The goal of code optimization is either to make code perform better such that it
 The goal of a software testing is to find bugs and get them fixed. Unit testing is a way of testing individual pieces of code(such as function) in isolation with the rest of the components. It is required to ensure quality control such that your code would not cause unexpected impact and works properly before deployment to a production environment. Writing modular codes as discussed above facilitate better implementation of unit testing. There are many packages in Python for automated unit testing;`Unittest` and `pytest` are the two most common ones. 
 
 
-### 9. Integrate logging with your codes
+### 9. Integrate logging with your codes.
 
 Logging is recording useful information during runtime for the identification of bugs and critical failures and performance improvement. Logging provides better insight into  the flow of a program and discover unforeseen consequences. It also helps others understand what your code actually does and whether it behaves in the intended way. The`logging` module in the standard library provides an easy and flexible way for emitting log messages from Python programs.
