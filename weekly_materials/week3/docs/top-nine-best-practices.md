@@ -23,7 +23,7 @@ A README document is often kept in the root directory of the project and is writ
 
 ### 4. Work inside a virtual environment.
 
-A virtual environment is an isolated environment that maintains a clean installation of Python packages and resolves project dependencies. It also helps others recreate the same environment in their computer quickly and in a hassle-free manner. Visit this [site] (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to learn how to create a virtual environment with Conda or [here](https://realpython.com/python-virtual-environments-a-primer/) with virtualenv package.
+A virtual environment is an isolated environment that maintains a clean installation of Python packages and resolves project dependencies. It also helps others recreate the same environment in their computer quickly and in a hassle-free manner. Visit this [site](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to learn how to create a virtual environment with Conda or [here](https://realpython.com/python-virtual-environments-a-primer/) with virtualenv package.
 
 
 ### 5. Adopt a consistent coding style .
