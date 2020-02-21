@@ -36,7 +36,7 @@ Documenting code is describing the purpose,  behaviour, and the use of a code to
 
 ### 7. Embrace modularity in your code.
 
-Modular programming is the process of breaking up a large body of code into smaller chunks in the form of functions and modules. Modularity helps in managing code complexity, facilitate easier debugging, and ensures the reusability of the codes. Modularity can be achieved by decomposing a large body of code . One way of achieving modularity in Python is by writing function that only does a single thing to input. Another way is to split the code into modules and group functions in a logical manner in each module. For example, separate modules could be written for importing data, preprocessing, training, and evaluation of a model. 
+Modular programming is the process of breaking up a large body of code into smaller chunks in the form of functions and modules. Modularity helps in managing code complexity, facilitate easier debugging, and ensures the reusability of the codes. One way of achieving modularity in Python is by writing function that only does a single thing to input. Another way is to split the code into modules and group functions in a logical manner in each module. For example, separate modules could be written for importing data, preprocessing, training, and evaluation of a model. 
 
 
 ### 8. Optimize your code for performance.
