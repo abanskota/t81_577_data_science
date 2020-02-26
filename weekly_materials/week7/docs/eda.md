@@ -25,4 +25,4 @@ EDA should be done with following questions in mind:
 
 Each of these questions will be treated seperately or in combination in the next few lectures of this week.
 
-[Next: Univariate EDA](https://github.com/abanskota/t81_577_data_science/weekly_materials/week7/docs/eda-univariate.ipynb)
+[Next: Univariate EDA](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week7/notebooks/eda-univariate.ipynb)
