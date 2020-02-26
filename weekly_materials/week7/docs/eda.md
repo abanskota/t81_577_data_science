@@ -23,6 +23,6 @@ EDA should be done with following questions in mind:
 #### 4. How do  feature vary in relation to each other and target variable?
 #### 5. Are there any observable trends, patterns, and  anomaly visible in the graphical analysis of data?
 
-Each of these questions will be treated seperately or in combination in the next few lectures of this week.
+In the upcoming lectures of this week, we will try to work with one open source dataset and perform EDA by treating those questions seperately or in combination.
 
 [Next: Univariate EDA](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week7/notebooks/eda-univariate.ipynb)
