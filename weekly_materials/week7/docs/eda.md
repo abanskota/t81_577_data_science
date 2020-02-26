@@ -2,11 +2,13 @@
 
 Exploratory data analysis (EDA) is a process of critical scrutiny of data in relation to the problem at hand. Generally speaking, any method of looking at data before fitting the model falls under the realm of exploratory data analysis. 
 
-EDA helps in:<br>
+EDA helps us:<br>
 
-- Understanding the quality, quantity, and the utility of data <br>
-- getting familiar with data distribution <br>
-- Formulating a plan to massage the data<br>
+- understand the quality, quantity, and the utility of data <br>
+- get familiar with data distribution <br>
+- formulate a plan to massage the data<br>
+- test preliminary hypothesis about the relationship among features<br>
+- understand the need for creating more features<br>
 
 
 Data for predictive modelling generally comes in the form of a rectangular array with rows representing records or observations on subjects. Column values typically contain one outcome variable and one or many predictor variables (features)  that contain either the numeric values (ratio and interval) for quantitative features or nominal and ordinal values for categorical ones.
