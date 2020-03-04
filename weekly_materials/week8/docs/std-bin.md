@@ -93,4 +93,4 @@ KBinsDiscretizer implements different binning strategies, which can be selected 
 
 Binning can also be done in a supervised manner so as to maximize information for the target variables in a predictive model.
 
-[Next:Categorical Encodings](https://nbviewer.jupyter.org/github/abanskota/t81_577_data_science/blob/master/weekly_materials/week7/notebooks/categorical-encoding.ipynb)
+[Next:Categorical Encodings](https://nbviewer.jupyter.org/github/abanskota/t81_577_data_science/blob/master/weekly_materials/week8/notebooks/categorical-encoding.ipynb)
