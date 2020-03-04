@@ -3,7 +3,15 @@
 Scikit-learn is a Python package for machine learning with a wide selection of learning algorithms. It is built on top of Scipy( scientific Python), Numpy, and Matplotlib libraries. As with Numpy and Pandas, it leverages c-libraries and the use of cython to improve performance. It integrates very well with many Pandas and Numpy including many others commonly used in data analysis and visualization. 
 
 
-Scikit-learn comes with Anaconda Python distribution. As always, to install in a different or virtual environment, use ```bash pip install scikit-learn``` or ```bash conda install scikit-learn```. 
+Scikit-learn comes with Anaconda Python distribution. As always, to install in a different or virtual environment, use 
+```bash 
+pip install scikit-learn
+``` 
+or 
+
+```bash 
+conda install scikit-learn
+```
 
 To import the library, use:
 
