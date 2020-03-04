@@ -2,14 +2,15 @@
 
 It is the process of generating additional features from raw data in order to improve the performance of machine learning algorithms relying on domain knowledge, intuition, and data manipulation.
 
-It is generally believed that feature engineering plays the most important part of a machine learning project's success or failure. This is because a machine learning algorithm only learns from the data we give it, and creating features that are relevant to a task can enrich the learning process.
+It is generally believed that feature engineering plays the most important part of a machine learning project's success or failure. This is because a machine learning algorithm learns from the data fed into it, and features that are relevant to a task improve the learning process. Simple models with better features always tend to outperform complex model with no so goo feature set.
 
-Feature engineering process could be data-specific. The categorical encodings discussed earlier is one type of a feature engineering process for text data. Similarly, a wide array of techniques of extracting features from imagery exist in the image processing domain. The feature engineering in the tabular data mainly involves two techniques that we already explored in EDA class.
+Feature engineering process could be data-specific. The categorical encodings discussed earlier is one type of a feature engineering process for text data. Similarly, a wide array of techniques of extracting features from imagery exist in the image processing domain. For tabular data, feature engineering typically involves either transformation or aggregation. 
 
 **Transformation**: Creating new features out of one or more of the existing columns in a row wise manner i.e. transformation of one row is independent of another row in an array or a dataframe.
 
 **Aggregation**: Creating new features from existing data from one or more existing columns by grouping observations over one or more other columns. 
 
+Domain knowledge plays a huge role in feature engineering. As we saw in EDA in the previous week, spending more time and exploring the nature of the data can give us insight about the direction of the trasformation and aggregation of data needed. Apart from that, talking to domain expert and reading literature on similar works can also help come up with intuition for generating better features. 
 
 As with other predictive modelling steps, feature engineering is an iterative process:
 
