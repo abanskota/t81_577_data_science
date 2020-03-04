@@ -34,3 +34,5 @@ References:
 
 
 [A Gentle Intoduction to Scikit-Learn](https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/)
+
+[Next: Imputation of missing values](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week8/docs/missing-value.md)
