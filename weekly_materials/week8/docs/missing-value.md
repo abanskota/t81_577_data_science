@@ -71,4 +71,7 @@ print(np.round(imp.fit_transform(df)))
  [ 7. 14.]]
  ```
 
-**_Note_** This estimator is in the experimental stage, import enable_iterative_imputer must be imported prior to importing the estimator .
+**_Note_** IterativeImputer is in the experimental stage, enable_iterative_imputer must be imported prior to importing the estimator.
+
+
+[Next: Standardization and Binning](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week8/docs/std-bin.md)
