@@ -29,6 +29,7 @@ To import the preprocessing module, type:
 from sklearn import preprocessing
 ```
 
+**Data Type**: array-like object is the most common data type for scikit-learns- array-like being any object compatible to numpy.array() method such as a numpy array, a list of numbers, pandas dataframe and series etc.
 
 References:
 
