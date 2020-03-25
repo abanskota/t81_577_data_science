@@ -1,13 +1,14 @@
-## Basic terminologies:
+## Basic terminologies
 
 ### Overfitting vs underfitting
 
-The left figure below shows the fitting of data points by a linear function (polynomial with degree 1), which is not sufficient to fit the training samples. This is called underfitting i.e., the model is unable to learn the underlying structure of data. A nonlinear model such as a polynomial of higher degree approximates the true function almost perfectly. However, for higher degrees the model will overfit the training data, i.e. it learns the noise of the training data. Higher the overfitting, the less likely the model generalizes correctly from the data.
+Overfitting occurs when a model memorizes its training data so well that it is learning noise on top of the signal. Underfitting is the opposite: the model is too simple to find the patterns in the data. The left figure below shows the underfitting of data points by a linear function (polynomial with degree 1), which is not sufficient to fit the training samples. A nonlinear model such as a polynomial of higher degree approximates the true function almost perfectly. However, for higher degrees the model will overfit the training data, i.e. it learns the noise of the training data. Higher the overfitting, the less likely the model generalizes correctly from the data.
+
 ![](../files/under-over.png)
 
 ### Bias vs variance 
 
-A low bias and a low variance are the two most desired features for a predictive model. Underfitting causes high bias, whereas overfitting of a model causes high variance. A simple linear algorithm might not fit training data well (high bias) but typically has the same performance with unseen data (low variance). A complex non-linear algorithm might fit the training data perfectly well (low bias)  but might have poor generalization capability (high variance). Consequently, we want our model to have enough degrees of freedom to resolve the underlying complexity of the data, but we also want it to not have too many degrees of freedom to avoid high variance. 
+A low bias and a low variance are the two most desired features for a predictive model. Here we are not refering to the formal definition of statistical bias and variance but to the related concepts in machine learning. Model is said to be biased if it systematically under or over predicts the target variable, wheras, variance is related to the generalizability of the model. Underfitting causes high bias; overfitting causes high variance. A simple linear algorithm might not fit training data well (high bias) but typically has the same performance with unseen data (low variance). A complex non-linear algorithm might fit the training data perfectly well (low bias) but might suffer from the poor generalization capability (high variance). Consequently, there is a tradeoff between having enough degrees of freedom to resolve the underlying complexity of the data and keeping it simple to avoid high variance. 
 
 ### Training-testing-validation
 
