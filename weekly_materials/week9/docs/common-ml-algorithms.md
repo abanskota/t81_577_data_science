@@ -21,6 +21,7 @@ Linear regression between a continuously valued response (target variable y) and
 When the best line is determined using a technique called least square, the linear regression is known as the least square regression or ordinary least square regression. The least square regression fitting procedure involves a loss function, known as residual sum of squares or RSS of the differences between true y value and estimated values. 
 
 ![](../files/loss.png)
+
 The coefficients are chosen, such that they minimize this loss function.
 
 **Note:** _It is common in machine learning to refer to the error between yhat and y of a single training observation as loss function, and the cumulative error over the entire dataset as cost function._
@@ -28,6 +29,7 @@ The coefficients are chosen, such that they minimize this loss function.
 ![](../files/argmin.png)
 
 The least square problem can be analytically solved with the following equation:
+
 ![](../files/xtx.png)
 
 However, when there are a very large number of predictor variables in the order of tens of thousands, optimization algorithms such as gradient descent provide faster and stable solutions to the least square problems. 
@@ -41,40 +43,53 @@ Regularisation is a process of adding a penalty term that shrinks the weight par
 ### Ridge regression
 
 Ridge regression  adds “square  value of magnitude” of weight parameters (L2 norm) to the loss function of a model to regularize a linear regression.
+
 ![](../files/ridge-loss.png)
+
 The loss function is modified by adding the shrinkage quantity as a penalty term.  The weight parameters are then estimated by minimizing the modified loss function. λ is the tuning parameter that decides how much we want to penalize the flexibility of our model. Greater the value of the lambda, more shrinkage would occur and the weight parameter tends to take small values leading to less overfitting. However, if lambda is very large then it will introduce bias (underfitting). Ridge regression is sensitive to scale and hence requires all explanatory variables to be in a similar scale.
 
 #### Lasso regression 
 
 LASSO  adds “absolute value of magnitude” of weight parameters (L1 norm) scaled by a regularization parameter as penalty term to the loss function.
+
 ![](../files/lasso-loss.png)
+
 Lasso regression tends to shrink the weight of less important features to zero, thereby removing some features altogether. Ridge regression on the other hand tends to minimize the larger weight parameter into small values due to the squared term in the loss function.
 
 ### Logistic regression 
 
 In spite of its name, logistic regression is a model for classification, not regression. It is one of the most widely used machine learning models for binary and multiclass classification.
 In case of binary classification of class 1 and 0, logistic regression computes the natural log of the odds that Y is equal to 1 (logit odds), which is simply the ratio of the probability that Y is 1 divided by the probability that Y is 0. 
+
  ![](../files/logistic.png)
+ 
 ,Where p = probability of y being class 1. This formula shows that the logistic regression model is a linear model for the log odds.
 Instead of the log odds, we are actually interested in the quantity p, which is estimated by applying a sigmoid or logistic function (inverse form of the logit function) to the quantity in the right hand side of the above equation. The estimated probability of an observation belonging to class 1 is then given by,
- ![](../files/sigmoid.png)
-Since the output of the sigmoid function always ranges between 0 and 1, the output value can be interpreted as the conditional probability of an observation belonging to the class.
- 	The loss function used in logistic regression is called log loss function, which takes the following form
- ![](../files/logloss.png)
+
+![](../files/sigmoid.png)
+
+Since the output of the sigmoid function always ranges between 0 and 1, the output value can be interpreted as the conditional probability of an observation belonging to the class. The loss function used in logistic regression is called log loss function, which takes the following form:
+
+![](../files/logloss.png)
+
 And the cost function over all training examples is given by,
- ![](../files/logcost.png)
+
+![](../files/logcost.png)
+
 Logistic regression can also be extended from binary classification to multi-class classification. Then it is called Multinomial Regression. Logistic regression is widely used in the industry setting when the interpretability of the model coefficients is the necessity. 
 
 ### Naïve Bayes Classifier Algorithm
 
 A Naive Bayes classifier machine learning model is used for classification tasks and based upon Bayes theorem. Bayes theorem from a classification standpoint can be specified in the following form:
- ![](../files/bayes.png)
+
+![](../files/bayes.png)
+
 ,Where the term in the left side is the probability of a certain class variable (yj) given predictor variables X .
 
 
 After assuming the independence of all xi variables for a given class, the class probability for class yj can be computed as joint probability of all xi given yj as follows:
 
- ![](../files/posterior.png)
+![](../files/posterior.png)
  
 Based upon the above, an observation will be assigned a class label that has the greatest conditional probability. Naive Bayes classifiers have found success in problems related to text classification and have been  used in email spam filtering and sentiment analysis problems.
 
@@ -83,5 +98,7 @@ Based upon the above, an observation will be assigned a class label that has the
 Tree-based methods are used for both regression and classification problems. Tree based methods recursively stratify or segment the feature space into a number of simple regions ( classes or real value output) using some decision rules •  Since the set of splitting rules used to segment the predictor space can be summarized in a tree, these types of approaches are known as decision-tree methods.
 
 Tree-based methods are simple and useful for interpretation. However,  their  predictive ability is typically inferior compared to more advanced machine learning approaches. Ensemble methods  combine multiple trees to yield a single consensus prediction that can often result in major improvements in prediction accuracy, at the expense of some loss interpretation. 
+
 ![](../files/tree.png)
+
 [Source]( https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
