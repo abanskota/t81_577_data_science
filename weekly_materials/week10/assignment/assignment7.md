@@ -1,4 +1,4 @@
-### Assignment 6
+### Assignment 7
 
 In this assignment, you will work with the Iris Flower dataset that you can load from sklearn.datasets. You will build predictive models using different classification algorithms and compare their predictive performances.
 
