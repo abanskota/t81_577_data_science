@@ -2,7 +2,7 @@
 
 **_Note_:** This lecture is based upon Andrew Ng's book: Machine Learning Yearning, which you can download from [here](https://www.deeplearning.ai/machine-learning-yearning/). 
 
-![](../files/train-test.png)
+![](../files/train-test.jpeg)
 
 **Recap:**
 
