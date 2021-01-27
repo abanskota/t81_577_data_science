@@ -106,7 +106,7 @@ conda install <package-name>
 
 To install specific version of the package scuh as scipy 0.15.0, run
 ```shellscript
-conda installscipy=0.15.0
+conda install scipy=0.15.0
 ```
 If a package is not available from conda or Anaconda.org,  install the package via conda-forge or with pip. Read more about installing packages [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html).
 
