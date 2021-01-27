@@ -4,7 +4,7 @@
 
 Instructor: Asim Banskota
 
-Spring 2020, Wednesday, 6:00 PM - 9:00 PM , Cupples II, Room L015
+Spring 2021, Wednesday, 6:00 PM - 9:00 PM , Cupples II, Room L015
 
 # Course Description
 
