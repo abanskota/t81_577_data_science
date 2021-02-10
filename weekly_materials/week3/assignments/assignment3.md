@@ -6,7 +6,7 @@
 - Create a README.md file at the root directory and briefly describe your project in the README.md file. (1 point)
 - Commit your changes and push the change to the GitHUB. (1 point)
 
-Write the url of your GitHub project in a text file and upload the file to OK. 
+Write the url of your GitHub project in a text file and upload the file to Canvas. 
 
 **Note**: If you fail to successfully push your files to GitHub, upload a screenshot of your project structure, README.md file and a screenshot of your commit command. You will ,however, lose points for not being able to push to GitHub.
 
