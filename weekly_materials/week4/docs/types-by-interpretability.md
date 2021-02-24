@@ -14,12 +14,6 @@ y = 0.1 + 2*x
 ```
 The model could be interpreted as: `for every 1 unit increase in x, y increases with 2 unit`. 
 
-As the regression becomes more complex with greater number of dependent variables and interactions between them, the model becomes less and less interpretable.
-
-_**Note**: The following is my own point of view. So take it with a grain of salt if you like._
-
-`Interpretability of a simple linear regression is only meaningful if all or most of the assumptions (especially related to unbiasedness) hold true. If not, the coefficients of models will be incorrect and lose any practical value of interpretability.`  
-
 
 ### Interpretability of a ML model
 
