@@ -18,4 +18,4 @@ _NOTE_: If you get memory issue in your computer, answer the airport related que
 
 Good luck!
 
-Submit your Notebook to OK for grading!
+Submit your Notebook to Canvas for grading!
