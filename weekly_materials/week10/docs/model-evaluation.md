@@ -59,7 +59,7 @@ TPR = TP / (TP + FN)
 
 False positive rate is the ratio between false positive and total number of negative cases
 
-FPR = FP/ (FN + TN)
+FPR = FP/ (FP + TN)
 
 **Receiver Operating characteristics(ROC) and Area under ROC Curve(AUC)**
 
