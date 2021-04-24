@@ -4,4 +4,3 @@ In this assignment, you will work with the Boston housing dataset that we used i
 
 Compare the performances of the hyperparameter search with default hyperparameter values and report the differences ( 3 points)
 
-Upload your notebook to OKPY.
