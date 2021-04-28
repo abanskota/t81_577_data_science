@@ -20,7 +20,7 @@ Let's train a very simple model using Boston Housing dataset that we have been u
 from sklearn.datasets import load_boston
 from sklearn.ensemble import RandomForestRegressor
 boston_dataset = load_boston()
-X = boston_dataset.data
+X = boston_dataset.data[:,[0,5,6,7]]
 Y = boston_dataset.target
 rf = RandomForestRegressor()
 rf.fit(X, Y)
@@ -34,7 +34,7 @@ with open('./model.pkl', 'wb') as model_pkl:
   pickle.dump(rf, model_pkl)
 ```
 
-Pickling converts the object into a byte stream which can be stored, transferred, and converted back to the original model at a later time. It provides a convenient way of storing machine learning models when their intended applications is also built in python. As a sidenote, there might be many other ways you are going to use you model object depending upon downstream platforms and applications.
+Pickling converts the object into a byte stream which can be stored, transferred, and converted back to the original model at a later time. It provides a convenient way of storing machine learning models when their intended applications is also built in python. As a sidenote, there might be many other ways you are going to use your model object depending upon downstream platforms and applications.
 
 - MLeap provides a common serialization format for spark , scikit-learn, and Tensorflow models
 - PMML , PFA, ONNX are language agnostics exchange formats to share models
@@ -55,7 +55,7 @@ Back-end Development refers to the parts of the website that a user doesn’t se
 
 It makes the process of designing a web application simpler. Flask lets us focus on what the users are requesting and what sort of response to give back. There are many other webframeworks but Flask is probably the most simplest for our purpose.
 
-There are front-end related things also we need to put together to build a web app that we will deal in later. First, we will focus on the backend that could be deployed as a local server in your own computer.
+There are front-end related things also we need to put together to build a web app that we will deal in later. First, we will focus on the backend that could be deployed in a local server in your own computer.
 
 
 Let's start with creating a new python file and type in the following command to import modules from flaks library.
@@ -83,7 +83,7 @@ with open('./model.pkl', 'rb') as model_pkl:
 app = Flask(__name__)
 ```
 
-Now add a function to predict that takes the input for Boston housing models and return the prediction. At this point, I realize that I should have picked only few important variables to avoid a lot of coding here. Anayway, this function will act as an enpoint of the API we are going to built.  
+Now add a function to predict that takes the input for Boston housing models and return the prediction.This function will act as an endpoint of the API we are going to built.  
 
 ``` python
 import numpy as np
@@ -99,7 +99,7 @@ def predict_boston():
 
     # prediction for new data
     unseen = np.array([[CRIM, RM, AGE, DIS]])
-    result = rf.predict(new)
+    result = rf.predict(unseen)
     # return the result back
     return 'The predicted price the Boston house with CRIM = {}, and RM = {}, and AGE = {}, and DIS = {} is : {}'.format( \
         unseen[0][0], unseen[0][1],unseen[0][2],unseen[0][3],result)
@@ -129,7 +129,7 @@ def predict_boston():
     
     # prediction for new data
     unseen = np.array([[CRIM, RM, AGE, DIS]])
-    result = rf.predict(new)
+    result = rf.predict(unseen)
     
     # return the result back
     return 'The predicted price the Boston house with CRIM = {}, and RM = {}, and AGE = {}, and DIS = {} is : {}'.format( \
@@ -154,12 +154,8 @@ http://localhost:5000/predict?CRIM=0.0006&RM=6.5&AGE=65&DIS=5
 It should return something like this:
 
 ```bash
-The predicted price the Boston house with CRIM = 0.0006, and RM = 6.5, and AGE = 65, and DIS = 5 is :
+The predicted price of the Boston house with CRIM = 0.0006, and RM = 6.5, and AGE = 65, and DIS = 5 is :
 ```
-
-
-
-
 
 We deployed our model on local server and accessed it with web clients to get the results. At this stage,  We need to do few more things to deploy it into the web.
 
@@ -215,19 +211,6 @@ The `action` attribute in the `form` tag tells flask to go to the URL and relate
         CRIM:
         <input name="CRIM" type="number" required>
         <br>
-        <br> ZN:
-        <input name="ZN" type="number" required>
-        <br>
-        <br> INDUS:
-        <input name="INDUS" type="number" required>
-        <br>
-        <br>
-        CHAS:
-        <input name="CHAS" type="number" required>
-        <br>
-        <br> NOAX:
-        <input name="NOAX" type="number" required>
-        <br>
         <br> RM:
         <input name="RM" type="number" required>
         <br>
@@ -237,24 +220,6 @@ The `action` attribute in the `form` tag tells flask to go to the URL and relate
         <br>
         <br> DIS:
         <input name="DIS" type="number" required>
-        <br>
-        <br> RAD:
-        <input name="RAD" type="number" required>
-        <br>
-        <br>
-        TAX:
-        <input name="TAX" type="number" required>
-        <br>
-        <br> PTRATIO:
-        <input name="PTRATIO" type="number" required>
-        <br>
-        <br> B:
-        <input name="B" type="number" required>
-        <br>
-        <br>
-        <br>
-        <br> LSTAT:
-        <input name="LSTAT" type="number" required>
         <br>
         <br>
         <input type="submit">
