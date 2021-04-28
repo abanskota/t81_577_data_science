@@ -1,7 +1,15 @@
 ### Deploying a ML model as a service
 
 
-In this lecture, you will learn we will learn to deploy a simple model (without online training, autoML, and batch prediction features) that can be deployed on the web. User can provide input for the features of your model one at a time to generate predictions.
+In the traditional ML developement framework, once a good model is found, it needs to be deployed to generate any value out of the model. At this stage, data scientists typically tend to feel that their job is mostly done. However, we soon realize that the running model in personal computer or in analytics environment is completely different from that in production envrionement. Data scientists experience a lot of friction points mainly becuase the model has to be adapated to the production environment. On top of that the model also needs to undergo various testing procedures to ensure the results are replicated from development environment. 
+
+In the more contemporary approach of continious delivery (CD4ML), the model building and deployment is a continious process and models are released at very early stage and are continiously improved and deployed at short increment cycle. In this framework, the model deployment is even more cross functional process where the data scientist's rols is tightly coupled with IT operations.
+
+Data scientists can contribute to smooth operationalization of the model deployment operation by being a keen obser. It doesn't mean that the data scientist must know all the nitty gritty of productionizing model. Having a general understading of the process can help us develop a production mindset right from the start.
+
+In this lecture, you will learn we will learn to deploy a simple model (without online training, autoML, and batch prediction features) that can be deployed on the web. User can provide input for the features of your model one at a time to generate predictions. In the next lecucture, we will learn about tranforming the whole model pipeline into production workflows using a workflow mangement program - Airflow.
+
+https://towardsdatascience.com/deploying-keras-deep-learning-models-with-flask-5da4181436a2
 
 
 ## Train and save a ML model
@@ -82,24 +90,19 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 def predict_boston():
     # Read all necessary request parameters 
+    # Read all necessary request parameters 
     CRIM = request.args.get('CRIM')
-    ZN = request.args.get('ZN')
-    INDUS = request.args.get('INDUS')
-    CHAS = request.args.get('CHAS')
-    NOX = request.args.get('NOX')
     RM = request.args.get('RM')
     AGE = request.args.get('AGE')
     DIS = request.args.get('DIS')
-    RAD = request.args.get('RAD')
-    TAX = request.args.get('TAX')
-    PTRATIO = request.args.get('PTRATIO')
-    B = request.args.get('B')
-    LSTAT = request.args.get('LSTAT')
+    
+
     # prediction for new data
-    new = np.array([[CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT]])
+    unseen = np.array([[CRIM, RM, AGE, DIS]])
     result = rf.predict(new)
     # return the result back
-    return 'Prediction for the given input: {} is: {}'.format(new, result)
+    return 'The predicted price the Boston house with CRIM = {}, and RM = {}, and AGE = {}, and DIS = {} is : {}'.format( \
+        unseen[0][0], unseen[0][1],unseen[0][2],unseen[0][3],result)
 ```
 
 Let's put the above code inside our script and map this function to a URL. This can be done through
@@ -117,28 +120,20 @@ with open('./model.pkl', 'rb') as model_pkl:
 
 # Create an API endpoint
 @app.route('/predict')
-def predict_boston():
+def predict_boston(): 
     # Read all necessary request parameters 
     CRIM = request.args.get('CRIM')
-    ZN = request.args.get('ZN')
-    INDUS = request.args.get('INDUS')
-    CHAS = request.args.get('CHAS')
-    NOX = request.args.get('NOX')
     RM = request.args.get('RM')
     AGE = request.args.get('AGE')
     DIS = request.args.get('DIS')
-    RAD = request.args.get('RAD')
-    TAX = request.args.get('TAX')
-    PTRATIO = request.args.get('PTRATIO')
-    B = request.args.get('B')
-    LSTAT = request.args.get('LSTAT')
-
+    
     # prediction for new data
-    new = np.array([[CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT]])
+    unseen = np.array([[CRIM, RM, AGE, DIS]])
     result = rf.predict(new)
     
     # return the result back
-    return 'Prediction for the given input: {} is: {}'.format(new, result)
+    return 'The predicted price the Boston house with CRIM = {}, and RM = {}, and AGE = {}, and DIS = {} is : {}'.format( \
+        unseen[0][0], unseen[0][1],unseen[0][2],unseen[0][3],result)
 
 if __name__ == '__main__':
     app.run()
@@ -152,20 +147,25 @@ By default, this Flask app will start up at localhost (127.0.0.1) and listen for
 Send the following `GET` request to the API using `Curl` or `Postman` or type in your broswer to receive the predicted price of the house 
 
 ```bash 
-http://localhost:5000/predict?CRIM=0.0006&ZN=20&INDUS=2&CHAS=0&NOX=0.5&RM=6.5&AGE=65&DIS=5&RAD=1&TAX=700&PTRATIO=1&B=396&LSTAT=498
+http://127.0.0.1:3000/predict?CRIM=0.0006&RM=6.5&AGE=65&DIS=5
+http://localhost:5000/predict?CRIM=0.0006&RM=6.5&AGE=65&DIS=5
 ```
 
 It should return something like this:
 
+```bash
+The predicted price the Boston house with CRIM = 0.0006, and RM = 6.5, and AGE = 65, and DIS = 5 is :
+```
 
-### Deploy web-app to Heroku
 
 
-We deployed our model on local server and accessed it with Postman. We need to do few more things to deploy it into the web.
 
-we need to slighly modify the Python code, rename the file, and create folders to put model and HTML templates. The HTML templates will  be used to render to enable users to input their own data and retrieve results.
 
-Add a `main()` function as below to the `main.py`. The app routing maps base URL `'/'` to the main function that returns the content inside the `main.html` file. Make sure to import `flask`, previously 
+We deployed our model on local server and accessed it with web clients to get the results. At this stage,  We need to do few more things to deploy it into the web.
+
+we need to slighly modify the Python code, rename the file, and create folders to put model and HTML templates. A template is a document that helps us render a `form` to enable users to input their own data and retrieve model prediction results. For a Flask web application, we can use the Jinja templating library to pass Python code to an HTML document. For example, in our main function, we’ll send the contents of the form to a template called main.html.
+
+Add a `main()` function as below to the `main.py`. The app routing decorator maps base URL `'/'` to the main function that returns the content inside the `main.html` file. Make sure to import `flask`, previously 
 you might have only imported a couple of models from the library. Look into the app.py in the webapp folder of this week lecture if needed.
 
 ```Python
@@ -194,7 +194,10 @@ Now your folder structure should look like this. The `template` folder consists 
 
 To test, if it is working until now, open your we browser and type `http://localhost:5000/`, it should render the content in your html.
 
-Now add more content to the html file in order to enable a user to submit input values in the form of the page. There should also be a button for the user to submit button. Flask extracts the data from the form with the flask.request.form functionality, which works like a dictionary. We can grab the data we want from the form by referring it to the name. This name will be set in the main.html template as below.
+Now add more content to the html file to enable a user to fill out a form with input values of a Boston house to obtain its predicted price.
+Once the user enters the information and hits submit (a POST request), we want to divert the input to the `predict` function to make predictions with our model.
+
+Flask will extract the data from the form with the flask.request.form functionality, which works like a dictionary. We can grab the data we want from the form by referring it to the name. This name will be set in the main.html template as below.
 
 The `action` attribute in the `form` tag tells flask to go to the URL and related function when the user submits the form. In this simple app, we just want the main function. The POST method tells that function that it should expect input and therefore process it.`
 
@@ -269,17 +272,17 @@ Modify the `app.py` by making following changes.
 - Map the main function to the base URL of the api that can handle `GET` and `POST` HTTP method. This enables flask to receives a POST request when a user submits the form with input information. The app will then extracts the input, runs it through the model and will finally render main.html with the results in place. 
 
 ```Python
+
 import pickle
+import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from flask import Flask, request
 import flask
-import numpy as np
-
-
-app = Flask(__name__, template_folder='templates')
 
 with open('./model/model.pkl', 'rb') as model_pkl:
     rf = pickle.load(model_pkl)
+
+app = Flask(__name__, template_folder='templates')
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -289,35 +292,26 @@ def main():
         return(flask.render_template('main.html'))
     
     if flask.request.method == 'POST':
-    
-        CRIM = request.args.form('CRIM')
-        ZN = request.args.form('ZN')
-        INDUS = request.args.form('INDUS')
-        CHAS = request.args.form('CHAS')
-        NOX = request.args.form('NOX')
-        RM = request.args.form('RM')
-        AGE = request.args.form('AGE')
-        DIS = request.args.form('DIS')
-        RAD = request.args.form('RAD')
-        TAX = request.args.form('TAX')
-        PTRATIO = request.args.form('PTRATIO')
-        B = request.args.form('B')
-        LSTAT = request.args.form('LSTAT')
+        CRIM = request.form['CRIM']
+        RM = request.form['RM']
+        AGE = request.form['AGE']
+        DIS = request.form['DIS']
+       
 
-    # Use the predict method of the model to 
-    # get the prediction for unseen data
-        unseen = np.array([[CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT]])
+        unseen = np.array([[CRIM, RM, AGE, DIS]])
+        print(unseen)
         result = rf.predict(unseen)
 
-        # return the result back
-        return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)
-
-
+        return 'The predicted price the Boston house with CRIM = {}, and RM = {}, and AGE = {}, and DIS = {} is : {}'.format(unseen[0][0], \
+            unseen[0][1],unseen[0][2],unseen[0][3],result)
+            
 if __name__ == '__main__':
     app.run()
 ```
 
 If you have followed everything correctly so far, you should have an app with basic functionality to interact with user for input and returning back the model prediction. You can chek this with `flask run` command and opening the related url on your browser.
+
+### Deploy web-app to Heroku
 
 Now we will deploy the model app on Heroku, which is a palatfom as a service (PaaS)that lets developers deploy their application amongst other things. To deploy on Heroku, you need to follow more steps:
 
