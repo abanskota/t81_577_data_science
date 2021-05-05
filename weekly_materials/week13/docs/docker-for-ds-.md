@@ -99,4 +99,4 @@ Follow [this](https://medium.com/@doedotdev/docker-flask-a-simple-tutorial-bbcb2
 ) tutorial based on which I created this lecture for more dicsussion on those commands.
 
 
-
+We will follow [here](https://willschenk.com/articles/2019/setting_up_chromebook/) tutorial to install postgres and pgadmin4 using docker. If you remember from [week5 lecture](https://www.docker.com/products/container-runtime#/download), it was quite tedious to install those two softwares. 
