@@ -4,16 +4,16 @@ In this lecture, you will learn:
 - How an analytical model that needs to be updated frequently can be converted into an Airflow workflow. 
 
 
-In [week10](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week10/notebooks/scikit-learn-pipeline.ipynb), we learn about how to streamline a machine learning workflow using a pipeline. We saw that a pipeline allows us to chain multiple preprocessing, model fitting, evaluation, and prediction steps into an automated workflow. If your model doesn't need to be trained on new dataset frequently and periodically, the deployment solution similar to what we learnt last week (pipeline + pickled model + flask) might serve well for the purpose. However, if the model needs to be trained online with peridic stream of data, then we need to consider various things:
+In [week10](https://github.com/abanskota/t81_577_data_science/blob/master/weekly_materials/week10/notebooks/scikit-learn-pipeline.ipynb), we learn about how to streamline a machine learning workflow using a pipeline. We saw that a pipeline allows us to chain multiple preprocessing, model fitting, evaluation, and prediction steps into an automated workflow. If your model doesn't need to be trained on new dataset frequently and periodically, the deployment solution similar to what we learnt last week (pipeline + pickled model + flask) might serve well for the purpose. However, if the model needs to be trained frequenlty with new stream of data, then we need to consider various things:
 
-- how to ingest the incoming data
+- how to ingest the incoming data in the existing framework
 - how to combine and transform the newly ingested data
 - how to schedule periodic training
 - how to efficiently handle error
 - how to automatically try more attempts in case of error
 - how to monitor and communicate updated status and performance of model
 
-Apache Airflow can be your friend in such situation to automate the end to end ML process from data ingestion to deployment and monitoring. Airflow is a platform to programmatically author, schedule and monitor workflows. One of the main advantages of using a workflow system like Airflow is that all is code, which makes your workflows explicit, maintainable, versionable, testable, and collaborative.
+Apache Airflow can be your friend in such situation to automate the end to end ML process from data ingestion to deployment and monitoring. Airflow is a platform to programmatically author, schedule and monitor workflows. One of the main advantages of using a workflow system like Airflow is that all is code to ensure that your workflow is explicit, maintainable, versionable, testable, and collaborative.
 
 - Integrates with a number of sources (databases, filesystems)
 - Tracks failure, retries, success
@@ -24,15 +24,15 @@ Apache Airflow can be your friend in such situation to automate the end to end M
 
 ### Basic Airflow concepts
 
-**Task**: a defined unit of work (these are called operators in Airflow)
-**Task instance**: an individual run of a single task. Task instances also have an indicative state, which could be “running”, “success”, “failed”, “skipped”, “up for retry”, etc.
-**DAG**: Directed acyclic graph, a set of tasks with explicit execution order, beginning, and end
-**DAG run**: individual execution/run of a DAG
+- **Task**: a defined unit of work (these are called operators in Airflow)
+- **Task instance**: an individual run of a single task. Task instances also state indicating status such as “running”, “success”, “failed”, “skipped”, “up for retry”, etc.
+- **DAG**: Directed acyclic graph, a set of tasks with explicit execution order, beginning, and end
+- **DAG run**: individual execution/run of a DAG
 
 <img src="https://airflow-tutorial.readthedocs.io/en/latest/_images/DAG.png" alt="_images/DAG.png"/>
 
 
-### Example
+### Example of workflow implementation in Airflow
 
 While any ML model can be deployed as workflow, the benefit would be more obvious with the example we follow here.
 
@@ -46,6 +46,7 @@ The workflow consist of:
 - Insert new data into database if not matched
 
 Here, we will use fake data generated from python library to create a table in Postgres.
+
 - The new data will also be created by the same library. 
 - The first name, last name, and address of the fields of the new record are cleaned (preprocessed)
 - that are comnew record will be run against all the records in the database to compute Jaro distance (a fuzzy matching) between first name, last name, score by an al
